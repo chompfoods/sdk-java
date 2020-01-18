@@ -33,7 +33,7 @@ import java.util.List;
  * An object containing information for this specific item.
  */
 @Schema(description = "An object containing information for this specific item.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-17T21:20:14.019Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-18T04:02:15.169Z[GMT]")
 public class IngredientObjectItems {
   @SerializedName("name")
   private String name = null;
