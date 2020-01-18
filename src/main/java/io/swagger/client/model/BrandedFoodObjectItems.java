@@ -38,7 +38,7 @@ import java.util.List;
  * An object containing information for this specific item.
  */
 @Schema(description = "An object containing information for this specific item.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-18T04:04:03.122Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-18T16:52:03.362Z[GMT]")
 public class BrandedFoodObjectItems {
   @SerializedName("barcode")
   private String barcode = null;
@@ -111,6 +111,9 @@ public class BrandedFoodObjectItems {
 
   @SerializedName("traces")
   private List<String> traces = null;
+
+  @SerializedName("vitamins")
+  private List<String> vitamins = null;
 
   @SerializedName("common_name")
   private String commonName = null;
@@ -644,6 +647,32 @@ public class BrandedFoodObjectItems {
     this.traces = traces;
   }
 
+  public BrandedFoodObjectItems vitamins(List<String> vitamins) {
+    this.vitamins = vitamins;
+    return this;
+  }
+
+  public BrandedFoodObjectItems addVitaminsItem(String vitaminsItem) {
+    if (this.vitamins == null) {
+      this.vitamins = new ArrayList<String>();
+    }
+    this.vitamins.add(vitaminsItem);
+    return this;
+  }
+
+   /**
+   * An array of vitamins that can be found in this item
+   * @return vitamins
+  **/
+  @Schema(description = "An array of vitamins that can be found in this item")
+  public List<String> getVitamins() {
+    return vitamins;
+  }
+
+  public void setVitamins(List<String> vitamins) {
+    this.vitamins = vitamins;
+  }
+
   public BrandedFoodObjectItems commonName(String commonName) {
     this.commonName = commonName;
     return this;
@@ -758,6 +787,7 @@ public class BrandedFoodObjectItems {
         Objects.equals(this.hasEnglishIngredients, brandedFoodObjectItems.hasEnglishIngredients) &&
         Objects.equals(this.minerals, brandedFoodObjectItems.minerals) &&
         Objects.equals(this.traces, brandedFoodObjectItems.traces) &&
+        Objects.equals(this.vitamins, brandedFoodObjectItems.vitamins) &&
         Objects.equals(this.commonName, brandedFoodObjectItems.commonName) &&
         Objects.equals(this.description, brandedFoodObjectItems.description) &&
         Objects.equals(this.keywords, brandedFoodObjectItems.keywords) &&
@@ -766,7 +796,7 @@ public class BrandedFoodObjectItems {
 
   @Override
   public int hashCode() {
-    return Objects.hash(barcode, name, brand, ingredients, _package, serving, categories, nutrients, calorieConversionFactor, proteinConversionFactor, dietLabels, dietFlags, packagingPhotos, components, portions, allergens, brandList, countries, countryDetails, palmOilIngredients, ingredientList, hasEnglishIngredients, minerals, traces, commonName, description, keywords, footnote);
+    return Objects.hash(barcode, name, brand, ingredients, _package, serving, categories, nutrients, calorieConversionFactor, proteinConversionFactor, dietLabels, dietFlags, packagingPhotos, components, portions, allergens, brandList, countries, countryDetails, palmOilIngredients, ingredientList, hasEnglishIngredients, minerals, traces, vitamins, commonName, description, keywords, footnote);
   }
 
 
@@ -799,6 +829,7 @@ public class BrandedFoodObjectItems {
     sb.append("    hasEnglishIngredients: ").append(toIndentedString(hasEnglishIngredients)).append("\n");
     sb.append("    minerals: ").append(toIndentedString(minerals)).append("\n");
     sb.append("    traces: ").append(toIndentedString(traces)).append("\n");
+    sb.append("    vitamins: ").append(toIndentedString(vitamins)).append("\n");
     sb.append("    commonName: ").append(toIndentedString(commonName)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    keywords: ").append(toIndentedString(keywords)).append("\n");
