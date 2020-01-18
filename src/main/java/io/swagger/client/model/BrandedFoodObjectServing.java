@@ -25,7 +25,7 @@ import java.io.IOException;
  * An object containing serving information for this item
  */
 @Schema(description = "An object containing serving information for this item")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-18T16:52:03.362Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-18T16:53:38.210Z[GMT]")
 public class BrandedFoodObjectServing {
   @SerializedName("size")
   private Integer size = null;

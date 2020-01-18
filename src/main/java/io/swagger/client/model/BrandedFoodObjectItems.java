@@ -38,7 +38,7 @@ import java.util.List;
  * An object containing information for this specific item.
  */
 @Schema(description = "An object containing information for this specific item.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-18T16:52:03.362Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-18T16:53:38.210Z[GMT]")
 public class BrandedFoodObjectItems {
   @SerializedName("barcode")
   private String barcode = null;
@@ -661,10 +661,10 @@ public class BrandedFoodObjectItems {
   }
 
    /**
-   * An array of vitamins that can be found in this item
+   * An array of vitamins that are found in this item
    * @return vitamins
   **/
-  @Schema(description = "An array of vitamins that can be found in this item")
+  @Schema(description = "An array of vitamins that are found in this item")
   public List<String> getVitamins() {
     return vitamins;
   }
