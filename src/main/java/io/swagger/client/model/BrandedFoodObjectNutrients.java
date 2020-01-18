@@ -29,7 +29,7 @@ import java.util.List;
  * An object containing nutrient information from multiple sources
  */
 @Schema(description = "An object containing nutrient information from multiple sources")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-17T21:20:14.019Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-18T04:02:15.169Z[GMT]")
 public class BrandedFoodObjectNutrients {
   @SerializedName("chomp")
   private List<BrandedFoodObjectNutrientsChomp> chomp = null;
