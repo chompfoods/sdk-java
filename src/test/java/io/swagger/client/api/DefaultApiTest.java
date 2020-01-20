@@ -115,12 +115,12 @@ public class DefaultApiTest {
      *          if the Api call fails
      */
     @Test
-    public void ingredientSearchPhpGetTest() throws ApiException {
+    public void foodIngredientSearchPhpGetTest() throws ApiException {
         Integer find = null;
         Boolean list = null;
         Boolean raw = null;
         Integer limit = null;
-        IngredientObject response = api.ingredientSearchPhpGet(find, list, raw, limit);
+        IngredientObject response = api.foodIngredientSearchPhpGet(find, list, raw, limit);
 
         // TODO: test validations
     }

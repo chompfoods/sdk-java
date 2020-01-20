@@ -2,7 +2,7 @@
 
 Chomp Food Database API Documentation
 - API version: 1.0.0-oas3
-  - Build date: 2020-01-18T16:53:38.210Z[GMT]
+  - Build date: 2020-01-20T16:28:37.294Z[GMT]
 
 __Important:__   - An __[API key](https://chompthis.com/api/)__ is required for access to this API.   - Get yours at __[https://chompthis.com/api](https://chompthis.com/api/)__.  -----  __Getting Started:__   - __[Subscribe](https://chompthis.com/api/#pricing)__ to the API.   - Scroll down and click the \"__Authorize__\" button.   - Enter your API key into the \"__value__\" input, click the \"__Authorize__\" button, then click the \"__Close__\" button.   - Scroll down to the section titled \"__default__\" and click on the API endpoint you wish to use.   - Click the \"__Try it out__\" button.   - Enter the information the endpoint requires.   - Click the \"__Execute__\" button.  __Example:__    - __[View example](https://raw.githubusercontent.com/chompfoods/examples/master/response-object.json)__ API response object.  -----  __How Do I Find My API Key?__   - Your API key was sent to the email address you used to create your subscription.   - You will also find your API key in the __[Client Center](https://chompthis.com/api/manage.php)__.   - _Read __[this article](https://desk.zoho.com/portal/chompthis/kb/articles/how-do-i-find-my-api-key)__ for more information._  ||| | ------- | -------- | | [Knowledge Base](https://desk.zoho.com/portal/chompthis/kb/chomp) | [Pricing](https://chompthis.com/api/) | | [Attribution](https://chompthis.com/api/docs/attribution.php) | [Cost Calculator](https://chompthis.com/api/cost-calculator.php) | | [Terms & License](https://chompthis.com/api/terms.php) | [Database Search](https://chompthis.com/api/lookup.php) | | [Support](https://chompthis.com/api/ticket-new.php) | [Query Builder](https://chompthis.com/api/build.php) | | [Client Center](https://chompthis.com/api/manage.php) | | 
 
@@ -231,10 +231,10 @@ public class DefaultApiExample {
         Boolean raw = true; // Boolean | Specify if you only want data for raw ingredients.  __Example:__ true _(defaults to true)_ 
         Integer limit = 56; // Integer | Set maximum number of records you want the API to return.  ___Important Note:__ Setting this to \"1\" will return 1 record per search term._  __Example:__ 1 _(defaults to 1, max is 3)_ 
         try {
-            IngredientObject result = apiInstance.ingredientSearchPhpGet(find, list, raw, limit);
+            IngredientObject result = apiInstance.foodIngredientSearchPhpGet(find, list, raw, limit);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling DefaultApi#ingredientSearchPhpGet");
+            System.err.println("Exception when calling DefaultApi#foodIngredientSearchPhpGet");
             e.printStackTrace();
         }
     }
@@ -251,7 +251,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**foodBrandedIdPhpGet**](docs/DefaultApi.md#foodBrandedIdPhpGet) | **GET** /food/branded/id.php | Get a branded food item using an ID number
 *DefaultApi* | [**foodBrandedNamePhpGet**](docs/DefaultApi.md#foodBrandedNamePhpGet) | **GET** /food/branded/name.php | Get a branded food item by name
 *DefaultApi* | [**foodBrandedSearchPhpGet**](docs/DefaultApi.md#foodBrandedSearchPhpGet) | **GET** /food/branded/search.php | Get data for branded food items using various search parameters
-*DefaultApi* | [**ingredientSearchPhpGet**](docs/DefaultApi.md#ingredientSearchPhpGet) | **GET** /ingredient/search.php | Get raw/generic food ingredient item(s)
+*DefaultApi* | [**foodIngredientSearchPhpGet**](docs/DefaultApi.md#foodIngredientSearchPhpGet) | **GET** /food/ingredient/search.php | Get raw/generic food ingredient item(s)
 
 ## Documentation for Models
 

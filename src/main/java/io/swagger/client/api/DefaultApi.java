@@ -645,7 +645,7 @@ public class DefaultApi {
         return call;
     }
     /**
-     * Build call for ingredientSearchPhpGet
+     * Build call for foodIngredientSearchPhpGet
      * @param find Specify the ingredient name(s).  __Example #1:__ broccoli  __Example #2:__ broccoli,cauliflower,spinach  ___Important Note:__ Set the \&quot;is_list\&quot; parameter to true before passing in a comma-separated list of ingredients._  (required)
      * @param list Specify if you are searching for multiple ingredients.  _Setting this to true will configure this endpoint so that it accepts a comma-separated list of ingredients._  _By default, this endpoint expects a single ingredient._  __Example:__ true _(defaults to false)_  (required)
      * @param raw Specify if you only want data for raw ingredients.  __Example:__ true _(defaults to true)_  (optional)
@@ -655,11 +655,11 @@ public class DefaultApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call ingredientSearchPhpGetCall(Integer find, Boolean list, Boolean raw, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call foodIngredientSearchPhpGetCall(Integer find, Boolean list, Boolean raw, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
-        String localVarPath = "/ingredient/search.php";
+        String localVarPath = "/food/ingredient/search.php";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -705,17 +705,17 @@ public class DefaultApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call ingredientSearchPhpGetValidateBeforeCall(Integer find, Boolean list, Boolean raw, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call foodIngredientSearchPhpGetValidateBeforeCall(Integer find, Boolean list, Boolean raw, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'find' is set
         if (find == null) {
-            throw new ApiException("Missing the required parameter 'find' when calling ingredientSearchPhpGet(Async)");
+            throw new ApiException("Missing the required parameter 'find' when calling foodIngredientSearchPhpGet(Async)");
         }
         // verify the required parameter 'list' is set
         if (list == null) {
-            throw new ApiException("Missing the required parameter 'list' when calling ingredientSearchPhpGet(Async)");
+            throw new ApiException("Missing the required parameter 'list' when calling foodIngredientSearchPhpGet(Async)");
         }
         
-        com.squareup.okhttp.Call call = ingredientSearchPhpGetCall(find, list, raw, limit, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = foodIngredientSearchPhpGetCall(find, list, raw, limit, progressListener, progressRequestListener);
         return call;
 
         
@@ -734,8 +734,8 @@ public class DefaultApi {
      * @return IngredientObject
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public IngredientObject ingredientSearchPhpGet(Integer find, Boolean list, Boolean raw, Integer limit) throws ApiException {
-        ApiResponse<IngredientObject> resp = ingredientSearchPhpGetWithHttpInfo(find, list, raw, limit);
+    public IngredientObject foodIngredientSearchPhpGet(Integer find, Boolean list, Boolean raw, Integer limit) throws ApiException {
+        ApiResponse<IngredientObject> resp = foodIngredientSearchPhpGetWithHttpInfo(find, list, raw, limit);
         return resp.getData();
     }
 
@@ -749,8 +749,8 @@ public class DefaultApi {
      * @return ApiResponse&lt;IngredientObject&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<IngredientObject> ingredientSearchPhpGetWithHttpInfo(Integer find, Boolean list, Boolean raw, Integer limit) throws ApiException {
-        com.squareup.okhttp.Call call = ingredientSearchPhpGetValidateBeforeCall(find, list, raw, limit, null, null);
+    public ApiResponse<IngredientObject> foodIngredientSearchPhpGetWithHttpInfo(Integer find, Boolean list, Boolean raw, Integer limit) throws ApiException {
+        com.squareup.okhttp.Call call = foodIngredientSearchPhpGetValidateBeforeCall(find, list, raw, limit, null, null);
         Type localVarReturnType = new TypeToken<IngredientObject>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -766,7 +766,7 @@ public class DefaultApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call ingredientSearchPhpGetAsync(Integer find, Boolean list, Boolean raw, Integer limit, final ApiCallback<IngredientObject> callback) throws ApiException {
+    public com.squareup.okhttp.Call foodIngredientSearchPhpGetAsync(Integer find, Boolean list, Boolean raw, Integer limit, final ApiCallback<IngredientObject> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -787,7 +787,7 @@ public class DefaultApi {
             };
         }
 
-        com.squareup.okhttp.Call call = ingredientSearchPhpGetValidateBeforeCall(find, list, raw, limit, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = foodIngredientSearchPhpGetValidateBeforeCall(find, list, raw, limit, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<IngredientObject>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**foodBrandedIdPhpGet**](DefaultApi.md#foodBrandedIdPhpGet) | **GET** /food/branded/id.php | Get a branded food item using an ID number
 [**foodBrandedNamePhpGet**](DefaultApi.md#foodBrandedNamePhpGet) | **GET** /food/branded/name.php | Get a branded food item by name
 [**foodBrandedSearchPhpGet**](DefaultApi.md#foodBrandedSearchPhpGet) | **GET** /food/branded/search.php | Get data for branded food items using various search parameters
-[**ingredientSearchPhpGet**](DefaultApi.md#ingredientSearchPhpGet) | **GET** /ingredient/search.php | Get raw/generic food ingredient item(s)
+[**foodIngredientSearchPhpGet**](DefaultApi.md#foodIngredientSearchPhpGet) | **GET** /food/ingredient/search.php | Get raw/generic food ingredient item(s)
 
 <a name="foodBrandedBarcodePhpGet"></a>
 # **foodBrandedBarcodePhpGet**
@@ -260,9 +260,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="ingredientSearchPhpGet"></a>
-# **ingredientSearchPhpGet**
-> IngredientObject ingredientSearchPhpGet(find, list, raw, limit)
+<a name="foodIngredientSearchPhpGet"></a>
+# **foodIngredientSearchPhpGet**
+> IngredientObject foodIngredientSearchPhpGet(find, list, raw, limit)
 
 Get raw/generic food ingredient item(s)
 
@@ -291,10 +291,10 @@ Boolean list = true; // Boolean | Specify if you are searching for multiple ingr
 Boolean raw = true; // Boolean | Specify if you only want data for raw ingredients.  __Example:__ true _(defaults to true)_ 
 Integer limit = 56; // Integer | Set maximum number of records you want the API to return.  ___Important Note:__ Setting this to \"1\" will return 1 record per search term._  __Example:__ 1 _(defaults to 1, max is 3)_ 
 try {
-    IngredientObject result = apiInstance.ingredientSearchPhpGet(find, list, raw, limit);
+    IngredientObject result = apiInstance.foodIngredientSearchPhpGet(find, list, raw, limit);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#ingredientSearchPhpGet");
+    System.err.println("Exception when calling DefaultApi#foodIngredientSearchPhpGet");
     e.printStackTrace();
 }
 ```
