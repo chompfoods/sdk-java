@@ -25,7 +25,7 @@ import java.io.IOException;
  * An object containing information on an individual ingredient that was flagged as potentially not being compatible with a certain diet
  */
 @Schema(description = "An object containing information on an individual ingredient that was flagged as potentially not being compatible with a certain diet")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-20T16:28:37.294Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-21T14:08:32.261Z[GMT]")
 public class BrandedFoodObjectDietFlags {
   @SerializedName("ingredient")
   private String ingredient = null;

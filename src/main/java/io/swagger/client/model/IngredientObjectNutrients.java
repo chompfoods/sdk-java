@@ -28,7 +28,7 @@ import java.util.List;
  * An object containing nutrient information from each source
  */
 @Schema(description = "An object containing nutrient information from each source")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-20T16:28:37.294Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-21T14:08:32.261Z[GMT]")
 public class IngredientObjectNutrients {
   @SerializedName("usda")
   private List<BrandedFoodObjectNutrientsUsda> usda = null;

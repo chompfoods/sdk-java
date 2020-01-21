@@ -26,7 +26,7 @@ import java.math.BigDecimal;
  * BrandedFoodObjectNutrientsUsda
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-20T16:28:37.294Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-21T14:08:32.261Z[GMT]")
 public class BrandedFoodObjectNutrientsUsda {
   @SerializedName("id")
   private Integer id = null;
@@ -49,14 +49,14 @@ public class BrandedFoodObjectNutrientsUsda {
   @SerializedName("median")
   private BigDecimal median = null;
 
+  @SerializedName("rank")
+  private Integer rank = null;
+
   @SerializedName("data_points")
   private Integer dataPoints = null;
 
   @SerializedName("footnote")
   private String footnote = null;
-
-  @SerializedName("source")
-  private String source = null;
 
   @SerializedName("description")
   private String description = null;
@@ -187,6 +187,24 @@ public class BrandedFoodObjectNutrientsUsda {
     this.median = median;
   }
 
+  public BrandedFoodObjectNutrientsUsda rank(Integer rank) {
+    this.rank = rank;
+    return this;
+  }
+
+   /**
+   * Nutrient rank
+   * @return rank
+  **/
+  @Schema(description = "Nutrient rank")
+  public Integer getRank() {
+    return rank;
+  }
+
+  public void setRank(Integer rank) {
+    this.rank = rank;
+  }
+
   public BrandedFoodObjectNutrientsUsda dataPoints(Integer dataPoints) {
     this.dataPoints = dataPoints;
     return this;
@@ -223,34 +241,16 @@ public class BrandedFoodObjectNutrientsUsda {
     this.footnote = footnote;
   }
 
-  public BrandedFoodObjectNutrientsUsda source(String source) {
-    this.source = source;
-    return this;
-  }
-
-   /**
-   * Description of the nutrient source
-   * @return source
-  **/
-  @Schema(description = "Description of the nutrient source")
-  public String getSource() {
-    return source;
-  }
-
-  public void setSource(String source) {
-    this.source = source;
-  }
-
   public BrandedFoodObjectNutrientsUsda description(String description) {
     this.description = description;
     return this;
   }
 
    /**
-   * Description of how the food nutrient value was obtained
+   * Description of the nutrient source
    * @return description
   **/
-  @Schema(description = "Description of how the food nutrient value was obtained")
+  @Schema(description = "Description of the nutrient source")
   public String getDescription() {
     return description;
   }
@@ -276,15 +276,15 @@ public class BrandedFoodObjectNutrientsUsda {
         Objects.equals(this.min, brandedFoodObjectNutrientsUsda.min) &&
         Objects.equals(this.max, brandedFoodObjectNutrientsUsda.max) &&
         Objects.equals(this.median, brandedFoodObjectNutrientsUsda.median) &&
+        Objects.equals(this.rank, brandedFoodObjectNutrientsUsda.rank) &&
         Objects.equals(this.dataPoints, brandedFoodObjectNutrientsUsda.dataPoints) &&
         Objects.equals(this.footnote, brandedFoodObjectNutrientsUsda.footnote) &&
-        Objects.equals(this.source, brandedFoodObjectNutrientsUsda.source) &&
         Objects.equals(this.description, brandedFoodObjectNutrientsUsda.description);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name, per100g, measurementUnit, min, max, median, dataPoints, footnote, source, description);
+    return Objects.hash(id, name, per100g, measurementUnit, min, max, median, rank, dataPoints, footnote, description);
   }
 
 
@@ -300,9 +300,9 @@ public class BrandedFoodObjectNutrientsUsda {
     sb.append("    min: ").append(toIndentedString(min)).append("\n");
     sb.append("    max: ").append(toIndentedString(max)).append("\n");
     sb.append("    median: ").append(toIndentedString(median)).append("\n");
+    sb.append("    rank: ").append(toIndentedString(rank)).append("\n");
     sb.append("    dataPoints: ").append(toIndentedString(dataPoints)).append("\n");
     sb.append("    footnote: ").append(toIndentedString(footnote)).append("\n");
-    sb.append("    source: ").append(toIndentedString(source)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("}");
     return sb.toString();

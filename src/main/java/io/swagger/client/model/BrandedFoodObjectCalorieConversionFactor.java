@@ -26,7 +26,7 @@ import java.math.BigDecimal;
  * An object containing the multiplication factors to be used when calculating energy from macronutrients for a specific food.
  */
 @Schema(description = "An object containing the multiplication factors to be used when calculating energy from macronutrients for a specific food.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-20T16:28:37.294Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-21T14:08:32.261Z[GMT]")
 public class BrandedFoodObjectCalorieConversionFactor {
   @SerializedName("protein_value")
   private BigDecimal proteinValue = null;
