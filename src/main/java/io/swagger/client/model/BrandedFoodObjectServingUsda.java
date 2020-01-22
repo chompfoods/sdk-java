@@ -22,51 +22,72 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 /**
- * An object containing basic packaging information about this item
+ * Serving information from the USDA
  */
-@Schema(description = "An object containing basic packaging information about this item")
+@Schema(description = "Serving information from the USDA")
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-22T13:41:41.982Z[GMT]")
-public class BrandedFoodObjectPackage {
-  @SerializedName("quantity")
-  private Integer quantity = null;
-
+public class BrandedFoodObjectServingUsda {
   @SerializedName("size")
   private String size = null;
 
-  public BrandedFoodObjectPackage quantity(Integer quantity) {
-    this.quantity = quantity;
-    return this;
-  }
+  @SerializedName("measurement_unit")
+  private String measurementUnit = null;
 
-   /**
-   * Package quantity
-   * @return quantity
-  **/
-  @Schema(description = "Package quantity")
-  public Integer getQuantity() {
-    return quantity;
-  }
+  @SerializedName("size_fulltext")
+  private String sizeFulltext = null;
 
-  public void setQuantity(Integer quantity) {
-    this.quantity = quantity;
-  }
-
-  public BrandedFoodObjectPackage size(String size) {
+  public BrandedFoodObjectServingUsda size(String size) {
     this.size = size;
     return this;
   }
 
    /**
-   * Package size
+   * Serving size
    * @return size
   **/
-  @Schema(description = "Package size")
+  @Schema(description = "Serving size")
   public String getSize() {
     return size;
   }
 
   public void setSize(String size) {
     this.size = size;
+  }
+
+  public BrandedFoodObjectServingUsda measurementUnit(String measurementUnit) {
+    this.measurementUnit = measurementUnit;
+    return this;
+  }
+
+   /**
+   * Measurement unit for each serving (e.g. if measure is 3 tsp, the unit is tsp)
+   * @return measurementUnit
+  **/
+  @Schema(description = "Measurement unit for each serving (e.g. if measure is 3 tsp, the unit is tsp)")
+  public String getMeasurementUnit() {
+    return measurementUnit;
+  }
+
+  public void setMeasurementUnit(String measurementUnit) {
+    this.measurementUnit = measurementUnit;
+  }
+
+  public BrandedFoodObjectServingUsda sizeFulltext(String sizeFulltext) {
+    this.sizeFulltext = sizeFulltext;
+    return this;
+  }
+
+   /**
+   * Serving size description
+   * @return sizeFulltext
+  **/
+  @Schema(description = "Serving size description")
+  public String getSizeFulltext() {
+    return sizeFulltext;
+  }
+
+  public void setSizeFulltext(String sizeFulltext) {
+    this.sizeFulltext = sizeFulltext;
   }
 
 
@@ -78,24 +99,26 @@ public class BrandedFoodObjectPackage {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    BrandedFoodObjectPackage brandedFoodObjectPackage = (BrandedFoodObjectPackage) o;
-    return Objects.equals(this.quantity, brandedFoodObjectPackage.quantity) &&
-        Objects.equals(this.size, brandedFoodObjectPackage.size);
+    BrandedFoodObjectServingUsda brandedFoodObjectServingUsda = (BrandedFoodObjectServingUsda) o;
+    return Objects.equals(this.size, brandedFoodObjectServingUsda.size) &&
+        Objects.equals(this.measurementUnit, brandedFoodObjectServingUsda.measurementUnit) &&
+        Objects.equals(this.sizeFulltext, brandedFoodObjectServingUsda.sizeFulltext);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(quantity, size);
+    return Objects.hash(size, measurementUnit, sizeFulltext);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class BrandedFoodObjectPackage {\n");
+    sb.append("class BrandedFoodObjectServingUsda {\n");
     
-    sb.append("    quantity: ").append(toIndentedString(quantity)).append("\n");
     sb.append("    size: ").append(toIndentedString(size)).append("\n");
+    sb.append("    measurementUnit: ").append(toIndentedString(measurementUnit)).append("\n");
+    sb.append("    sizeFulltext: ").append(toIndentedString(sizeFulltext)).append("\n");
     sb.append("}");
     return sb.toString();
   }
