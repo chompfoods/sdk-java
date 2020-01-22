@@ -1,6 +1,6 @@
 /*
  * Chomp Food Database API Documentation
- * __Important:__   - An __[API key](https://chompthis.com/api/)__ is required for access to this API.   - Get yours at __[https://chompthis.com/api](https://chompthis.com/api/)__.  -----  __Getting Started:__   - __[Subscribe](https://chompthis.com/api/#pricing)__ to the API.   - Scroll down and click the \"__Authorize__\" button.   - Enter your API key into the \"__value__\" input, click the \"__Authorize__\" button, then click the \"__Close__\" button.   - Scroll down to the section titled \"__default__\" and click on the API endpoint you wish to use.   - Click the \"__Try it out__\" button.   - Enter the information the endpoint requires.   - Click the \"__Execute__\" button.  __Example:__    - Branded Food: __[View example](https://raw.githubusercontent.com/chompfoods/examples/master/branded-food-response-object.json)__ API response object.   - Ingredient: __[View example](https://raw.githubusercontent.com/chompfoods/examples/master/ingredient-response-object.json)__ API response object.  -----  __How Do I Find My API Key?__   - Your API key was sent to the email address you used to create your subscription.   - You will also find your API key in the __[Client Center](https://chompthis.com/api/manage.php)__.   - _Read __[this article](https://desk.zoho.com/portal/chompthis/kb/articles/how-do-i-find-my-api-key)__ for more information._  ||| | ------- | -------- | | [Knowledge Base](https://desk.zoho.com/portal/chompthis/kb/chomp) | [Pricing](https://chompthis.com/api/) | | [Attribution](https://chompthis.com/api/docs/attribution.php) | [Cost Calculator](https://chompthis.com/api/cost-calculator.php) | | [Terms & License](https://chompthis.com/api/terms.php) | [Database Search](https://chompthis.com/api/lookup.php) | | [Support](https://chompthis.com/api/ticket-new.php) | [Query Builder](https://chompthis.com/api/build.php) | | [Client Center](https://chompthis.com/api/manage.php) | | 
+ * __Important:__   - An __[API key](https://chompthis.com/api/)__ is required for access to this API. Get yours at __[https://chompthis.com/api](https://chompthis.com/api/)__.  -----  __Getting Started:__   - __[Subscribe](https://chompthis.com/api/#pricing)__ to the API.   - Scroll down and click the \"__Authorize__\" button.   - Enter your API key into the \"__value__\" input, click the \"__Authorize__\" button, then click the \"__Close__\" button.   - Scroll down to the section titled \"__default__\" and click on the API endpoint you wish to use.   - Click the \"__Try it out__\" button.   - Enter the information the endpoint requires.   - Click the \"__Execute__\" button.  __Example:__    - Branded Food: __[View example](https://raw.githubusercontent.com/chompfoods/examples/master/branded-food-response-object.json)__ API response object.   - Ingredient: __[View example](https://raw.githubusercontent.com/chompfoods/examples/master/ingredient-response-object.json)__ API response object.  -----  __How Do I Find My API Key?__   - Your API key was sent to the email address you used to create your subscription.   - You will also find your API key in the __[Client Center](https://chompthis.com/api/manage.php)__.   - _Read __[this article](https://desk.zoho.com/portal/chompthis/kb/articles/how-do-i-find-my-api-key)__ for more information._  ||| | ------- | -------- | | [Knowledge Base](https://desk.zoho.com/portal/chompthis/kb/chomp) | [Pricing](https://chompthis.com/api/) | | [Attribution](https://chompthis.com/api/docs/attribution.php) | [Cost Calculator](https://chompthis.com/api/cost-calculator.php) | | [Terms & License](https://chompthis.com/api/terms.php) | [Database Search](https://chompthis.com/api/lookup.php) | | [Support](https://chompthis.com/api/ticket-new.php) | [Query Builder](https://chompthis.com/api/build.php) | | [Client Center](https://chompthis.com/api/manage.php) | | 
  *
  * OpenAPI spec version: 1.0.0-oas3
  * 
@@ -33,7 +33,7 @@ import java.util.List;
  * An object containing information for this specific item.
  */
 @Schema(description = "An object containing information for this specific item.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-22T14:07:33.984Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-22T15:36:20.582Z[GMT]")
 public class IngredientObjectItems {
   @SerializedName("name")
   private String name = null;
@@ -59,8 +59,8 @@ public class IngredientObjectItems {
   @SerializedName("portions")
   private List<BrandedFoodObjectPortions> portions = null;
 
-  @SerializedName("common_name")
-  private String commonName = null;
+  @SerializedName("common_names")
+  private String commonNames = null;
 
   @SerializedName("description")
   private String description = null;
@@ -236,22 +236,22 @@ public class IngredientObjectItems {
     this.portions = portions;
   }
 
-  public IngredientObjectItems commonName(String commonName) {
-    this.commonName = commonName;
+  public IngredientObjectItems commonNames(String commonNames) {
+    this.commonNames = commonNames;
     return this;
   }
 
    /**
    * Common names associated with this item. These generally clarify what the item is (e.g. when the brand name is \&quot;BRAND&#x27;s Spicy Enchilada\&quot; the common name may be \&quot;Chicken enchilada\&quot;)
-   * @return commonName
+   * @return commonNames
   **/
   @Schema(description = "Common names associated with this item. These generally clarify what the item is (e.g. when the brand name is \"BRAND's Spicy Enchilada\" the common name may be \"Chicken enchilada\")")
-  public String getCommonName() {
-    return commonName;
+  public String getCommonNames() {
+    return commonNames;
   }
 
-  public void setCommonName(String commonName) {
-    this.commonName = commonName;
+  public void setCommonNames(String commonNames) {
+    this.commonNames = commonNames;
   }
 
   public IngredientObjectItems description(String description) {
@@ -308,14 +308,14 @@ public class IngredientObjectItems {
         Objects.equals(this.dietLabels, ingredientObjectItems.dietLabels) &&
         Objects.equals(this.components, ingredientObjectItems.components) &&
         Objects.equals(this.portions, ingredientObjectItems.portions) &&
-        Objects.equals(this.commonName, ingredientObjectItems.commonName) &&
+        Objects.equals(this.commonNames, ingredientObjectItems.commonNames) &&
         Objects.equals(this.description, ingredientObjectItems.description) &&
         Objects.equals(this.footnote, ingredientObjectItems.footnote);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, categories, nutrients, calorieConversionFactor, proteinConversionFactor, dietLabels, components, portions, commonName, description, footnote);
+    return Objects.hash(name, categories, nutrients, calorieConversionFactor, proteinConversionFactor, dietLabels, components, portions, commonNames, description, footnote);
   }
 
 
@@ -332,7 +332,7 @@ public class IngredientObjectItems {
     sb.append("    dietLabels: ").append(toIndentedString(dietLabels)).append("\n");
     sb.append("    components: ").append(toIndentedString(components)).append("\n");
     sb.append("    portions: ").append(toIndentedString(portions)).append("\n");
-    sb.append("    commonName: ").append(toIndentedString(commonName)).append("\n");
+    sb.append("    commonNames: ").append(toIndentedString(commonNames)).append("\n");
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    footnote: ").append(toIndentedString(footnote)).append("\n");
     sb.append("}");
