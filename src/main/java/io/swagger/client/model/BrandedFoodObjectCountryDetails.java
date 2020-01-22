@@ -25,7 +25,7 @@ import java.io.IOException;
  * An object containing additional information on the countries where this item is found
  */
 @Schema(description = "An object containing additional information on the countries where this item is found")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-22T12:50:39.967Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-22T12:55:43.998Z[GMT]")
 public class BrandedFoodObjectCountryDetails {
   @SerializedName("english_speaking")
   private Integer englishSpeaking = null;

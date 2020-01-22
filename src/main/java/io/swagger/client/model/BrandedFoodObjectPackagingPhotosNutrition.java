@@ -25,7 +25,7 @@ import java.io.IOException;
  * An object containing photos of this item&#x27;s nutrition label
  */
 @Schema(description = "An object containing photos of this item's nutrition label")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-22T12:50:39.967Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-22T12:55:43.998Z[GMT]")
 public class BrandedFoodObjectPackagingPhotosNutrition {
   @SerializedName("small")
   private String small = null;
