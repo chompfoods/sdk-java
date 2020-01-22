@@ -25,13 +25,13 @@ import java.io.IOException;
  * An object containing basic packaging information about this item
  */
 @Schema(description = "An object containing basic packaging information about this item")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-21T23:19:12.862Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-22T12:50:39.967Z[GMT]")
 public class BrandedFoodObjectPackage {
   @SerializedName("quantity")
   private Integer quantity = null;
 
   @SerializedName("size")
-  private Integer size = null;
+  private String size = null;
 
   public BrandedFoodObjectPackage quantity(Integer quantity) {
     this.quantity = quantity;
@@ -51,7 +51,7 @@ public class BrandedFoodObjectPackage {
     this.quantity = quantity;
   }
 
-  public BrandedFoodObjectPackage size(Integer size) {
+  public BrandedFoodObjectPackage size(String size) {
     this.size = size;
     return this;
   }
@@ -61,11 +61,11 @@ public class BrandedFoodObjectPackage {
    * @return size
   **/
   @Schema(description = "Package size")
-  public Integer getSize() {
+  public String getSize() {
     return size;
   }
 
-  public void setSize(Integer size) {
+  public void setSize(String size) {
     this.size = size;
   }
 

@@ -19,73 +19,53 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.client.model.BrandedFoodObjectNutrientsChomp;
-import io.swagger.client.model.BrandedFoodObjectNutrientsUsda;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 /**
- * An object containing nutrient information from multiple sources
+ * An object containing this item&#x27;s ingredients in order of highest value to least
  */
-@Schema(description = "An object containing nutrient information from multiple sources")
+@Schema(description = "An object containing this item's ingredients in order of highest value to least")
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-22T12:50:39.967Z[GMT]")
-public class BrandedFoodObjectNutrients {
+public class BrandedFoodObjectIngredients {
   @SerializedName("chomp")
-  private List<BrandedFoodObjectNutrientsChomp> chomp = null;
+  private String chomp = null;
 
   @SerializedName("usda")
-  private List<BrandedFoodObjectNutrientsUsda> usda = null;
+  private String usda = null;
 
-  public BrandedFoodObjectNutrients chomp(List<BrandedFoodObjectNutrientsChomp> chomp) {
+  public BrandedFoodObjectIngredients chomp(String chomp) {
     this.chomp = chomp;
-    return this;
-  }
-
-  public BrandedFoodObjectNutrients addChompItem(BrandedFoodObjectNutrientsChomp chompItem) {
-    if (this.chomp == null) {
-      this.chomp = new ArrayList<BrandedFoodObjectNutrientsChomp>();
-    }
-    this.chomp.add(chompItem);
     return this;
   }
 
    /**
-   * An array containing an object for each nutrient data point
+   * This item&#x27;s ingredients as seen on ChompThis.com
    * @return chomp
   **/
-  @Schema(description = "An array containing an object for each nutrient data point")
-  public List<BrandedFoodObjectNutrientsChomp> getChomp() {
+  @Schema(description = "This item's ingredients as seen on ChompThis.com")
+  public String getChomp() {
     return chomp;
   }
 
-  public void setChomp(List<BrandedFoodObjectNutrientsChomp> chomp) {
+  public void setChomp(String chomp) {
     this.chomp = chomp;
   }
 
-  public BrandedFoodObjectNutrients usda(List<BrandedFoodObjectNutrientsUsda> usda) {
+  public BrandedFoodObjectIngredients usda(String usda) {
     this.usda = usda;
     return this;
   }
 
-  public BrandedFoodObjectNutrients addUsdaItem(BrandedFoodObjectNutrientsUsda usdaItem) {
-    if (this.usda == null) {
-      this.usda = new ArrayList<BrandedFoodObjectNutrientsUsda>();
-    }
-    this.usda.add(usdaItem);
-    return this;
-  }
-
    /**
-   * An array containing an object for each nutrient data point as found in the USDA database
+   * This branded food item&#x27;s ingredients according to the USDA
    * @return usda
   **/
-  @Schema(description = "An array containing an object for each nutrient data point as found in the USDA database")
-  public List<BrandedFoodObjectNutrientsUsda> getUsda() {
+  @Schema(description = "This branded food item's ingredients according to the USDA")
+  public String getUsda() {
     return usda;
   }
 
-  public void setUsda(List<BrandedFoodObjectNutrientsUsda> usda) {
+  public void setUsda(String usda) {
     this.usda = usda;
   }
 
@@ -98,9 +78,9 @@ public class BrandedFoodObjectNutrients {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    BrandedFoodObjectNutrients brandedFoodObjectNutrients = (BrandedFoodObjectNutrients) o;
-    return Objects.equals(this.chomp, brandedFoodObjectNutrients.chomp) &&
-        Objects.equals(this.usda, brandedFoodObjectNutrients.usda);
+    BrandedFoodObjectIngredients brandedFoodObjectIngredients = (BrandedFoodObjectIngredients) o;
+    return Objects.equals(this.chomp, brandedFoodObjectIngredients.chomp) &&
+        Objects.equals(this.usda, brandedFoodObjectIngredients.usda);
   }
 
   @Override
@@ -112,7 +92,7 @@ public class BrandedFoodObjectNutrients {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class BrandedFoodObjectNutrients {\n");
+    sb.append("class BrandedFoodObjectIngredients {\n");
     
     sb.append("    chomp: ").append(toIndentedString(chomp)).append("\n");
     sb.append("    usda: ").append(toIndentedString(usda)).append("\n");

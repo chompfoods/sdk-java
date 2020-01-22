@@ -26,7 +26,7 @@ import java.math.BigDecimal;
  * BrandedFoodObjectNutrientsUsda
  */
 
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-21T23:19:12.862Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-22T12:50:39.967Z[GMT]")
 public class BrandedFoodObjectNutrientsUsda {
   @SerializedName("id")
   private Integer id = null;

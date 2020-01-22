@@ -26,7 +26,7 @@ import java.math.BigDecimal;
  * An object containing information on a specific food portion found in this item
  */
 @Schema(description = "An object containing information on a specific food portion found in this item")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-21T23:19:12.862Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-22T12:50:39.967Z[GMT]")
 public class BrandedFoodObjectPortions {
   @SerializedName("measurement_unit")
   private String measurementUnit = null;
