@@ -3,5 +3,5 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**chomp** | **String** | This item&#x27;s ingredients as seen on ChompThis.com |  [optional]
+**chomp** | **String** | Ingredients for this item from Chomp&#x27;s internal database |  [optional]
 **usda** | **String** | This branded food item&#x27;s ingredients according to the USDA |  [optional]

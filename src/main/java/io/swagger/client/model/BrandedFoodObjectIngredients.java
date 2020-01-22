@@ -25,7 +25,7 @@ import java.io.IOException;
  * An object containing this item&#x27;s ingredients in order of highest value to least
  */
 @Schema(description = "An object containing this item's ingredients in order of highest value to least")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-22T13:41:41.982Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-22T14:07:33.984Z[GMT]")
 public class BrandedFoodObjectIngredients {
   @SerializedName("chomp")
   private String chomp = null;
@@ -39,10 +39,10 @@ public class BrandedFoodObjectIngredients {
   }
 
    /**
-   * This item&#x27;s ingredients as seen on ChompThis.com
+   * Ingredients for this item from Chomp&#x27;s internal database
    * @return chomp
   **/
-  @Schema(description = "This item's ingredients as seen on ChompThis.com")
+  @Schema(description = "Ingredients for this item from Chomp's internal database")
   public String getChomp() {
     return chomp;
   }
