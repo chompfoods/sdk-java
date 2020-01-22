@@ -25,7 +25,7 @@ import java.io.IOException;
  * An object containing information on this item&#x27;s compatibility with the Vegan diets
  */
 @Schema(description = "An object containing information on this item's compatibility with the Vegan diets")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-22T12:55:43.998Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-22T13:02:22.100Z[GMT]")
 public class BrandedFoodObjectDietLabelsVegan {
   @SerializedName("name")
   private String name = null;
