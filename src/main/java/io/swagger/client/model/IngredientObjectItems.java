@@ -19,8 +19,8 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.client.model.BrandedFoodObjectCalorieConversionFactor;
 import io.swagger.client.model.BrandedFoodObjectDietLabels;
+import io.swagger.client.model.IngredientObjectCalorieConversionFactor;
 import io.swagger.client.model.IngredientObjectComponents;
 import io.swagger.client.model.IngredientObjectNutrients;
 import io.swagger.client.model.IngredientObjectPortions;
@@ -33,7 +33,7 @@ import java.util.List;
  * An object containing information for this specific item.
  */
 @Schema(description = "An object containing information for this specific item.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-23T13:13:51.304Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-23T13:15:58.504Z[GMT]")
 public class IngredientObjectItems {
   @SerializedName("name")
   private String name = null;
@@ -45,7 +45,7 @@ public class IngredientObjectItems {
   private IngredientObjectNutrients nutrients = null;
 
   @SerializedName("calorie_conversion_factor")
-  private BrandedFoodObjectCalorieConversionFactor calorieConversionFactor = null;
+  private IngredientObjectCalorieConversionFactor calorieConversionFactor = null;
 
   @SerializedName("protein_conversion_factor")
   private BigDecimal proteinConversionFactor = null;
@@ -130,7 +130,7 @@ public class IngredientObjectItems {
     this.nutrients = nutrients;
   }
 
-  public IngredientObjectItems calorieConversionFactor(BrandedFoodObjectCalorieConversionFactor calorieConversionFactor) {
+  public IngredientObjectItems calorieConversionFactor(IngredientObjectCalorieConversionFactor calorieConversionFactor) {
     this.calorieConversionFactor = calorieConversionFactor;
     return this;
   }
@@ -140,11 +140,11 @@ public class IngredientObjectItems {
    * @return calorieConversionFactor
   **/
   @Schema(description = "")
-  public BrandedFoodObjectCalorieConversionFactor getCalorieConversionFactor() {
+  public IngredientObjectCalorieConversionFactor getCalorieConversionFactor() {
     return calorieConversionFactor;
   }
 
-  public void setCalorieConversionFactor(BrandedFoodObjectCalorieConversionFactor calorieConversionFactor) {
+  public void setCalorieConversionFactor(IngredientObjectCalorieConversionFactor calorieConversionFactor) {
     this.calorieConversionFactor = calorieConversionFactor;
   }
 

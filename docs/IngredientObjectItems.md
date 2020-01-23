@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **name** | **String** | Item name as provided by brand owner or as shown on packaging |  [optional]
 **categories** | **List&lt;String&gt;** |  |  [optional]
 **nutrients** | [**IngredientObjectNutrients**](IngredientObjectNutrients.md) |  |  [optional]
-**calorieConversionFactor** | [**BrandedFoodObjectCalorieConversionFactor**](BrandedFoodObjectCalorieConversionFactor.md) |  |  [optional]
+**calorieConversionFactor** | [**IngredientObjectCalorieConversionFactor**](IngredientObjectCalorieConversionFactor.md) |  |  [optional]
 **proteinConversionFactor** | [**BigDecimal**](BigDecimal.md) | The multiplication factor used to calculate protein from nitrogen |  [optional]
 **dietLabels** | [**BrandedFoodObjectDietLabels**](BrandedFoodObjectDietLabels.md) |  |  [optional]
 **components** | [**List&lt;IngredientObjectComponents&gt;**](IngredientObjectComponents.md) | An array of objects containing the constituent parts of a food (e.g. bone is a component of meat) |  [optional]

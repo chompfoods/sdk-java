@@ -21,52 +21,74 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
+import java.math.BigDecimal;
 /**
- * An object containing this item&#x27;s ingredients in order of highest value to least
+ * An object containing the multiplication factors to be used when calculating energy from macronutrients for a specific food.
  */
-@Schema(description = "An object containing this item's ingredients in order of highest value to least")
+@Schema(description = "An object containing the multiplication factors to be used when calculating energy from macronutrients for a specific food.")
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-23T13:15:58.504Z[GMT]")
-public class BrandedFoodObjectIngredients {
-  @SerializedName("chomp")
-  private String chomp = null;
+public class IngredientObjectCalorieConversionFactor {
+  @SerializedName("protein_value")
+  private BigDecimal proteinValue = null;
 
-  @SerializedName("usda")
-  private String usda = null;
+  @SerializedName("fat_value")
+  private BigDecimal fatValue = null;
 
-  public BrandedFoodObjectIngredients chomp(String chomp) {
-    this.chomp = chomp;
+  @SerializedName("carbohydrate_value")
+  private BigDecimal carbohydrateValue = null;
+
+  public IngredientObjectCalorieConversionFactor proteinValue(BigDecimal proteinValue) {
+    this.proteinValue = proteinValue;
     return this;
   }
 
    /**
-   * Ingredients for this item from Chomp&#x27;s internal database
-   * @return chomp
+   * The multiplication factor for protein
+   * @return proteinValue
   **/
-  @Schema(description = "Ingredients for this item from Chomp's internal database")
-  public String getChomp() {
-    return chomp;
+  @Schema(description = "The multiplication factor for protein")
+  public BigDecimal getProteinValue() {
+    return proteinValue;
   }
 
-  public void setChomp(String chomp) {
-    this.chomp = chomp;
+  public void setProteinValue(BigDecimal proteinValue) {
+    this.proteinValue = proteinValue;
   }
 
-  public BrandedFoodObjectIngredients usda(String usda) {
-    this.usda = usda;
+  public IngredientObjectCalorieConversionFactor fatValue(BigDecimal fatValue) {
+    this.fatValue = fatValue;
     return this;
   }
 
    /**
-   * This branded food item&#x27;s ingredients, according to the USDA
-   * @return usda
+   * The multiplication factor for fat
+   * @return fatValue
   **/
-  @Schema(description = "This branded food item's ingredients, according to the USDA")
-  public String getUsda() {
-    return usda;
+  @Schema(description = "The multiplication factor for fat")
+  public BigDecimal getFatValue() {
+    return fatValue;
   }
 
-  public void setUsda(String usda) {
-    this.usda = usda;
+  public void setFatValue(BigDecimal fatValue) {
+    this.fatValue = fatValue;
+  }
+
+  public IngredientObjectCalorieConversionFactor carbohydrateValue(BigDecimal carbohydrateValue) {
+    this.carbohydrateValue = carbohydrateValue;
+    return this;
+  }
+
+   /**
+   * The multiplication factor for carbohydrates
+   * @return carbohydrateValue
+  **/
+  @Schema(description = "The multiplication factor for carbohydrates")
+  public BigDecimal getCarbohydrateValue() {
+    return carbohydrateValue;
+  }
+
+  public void setCarbohydrateValue(BigDecimal carbohydrateValue) {
+    this.carbohydrateValue = carbohydrateValue;
   }
 
 
@@ -78,24 +100,26 @@ public class BrandedFoodObjectIngredients {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    BrandedFoodObjectIngredients brandedFoodObjectIngredients = (BrandedFoodObjectIngredients) o;
-    return Objects.equals(this.chomp, brandedFoodObjectIngredients.chomp) &&
-        Objects.equals(this.usda, brandedFoodObjectIngredients.usda);
+    IngredientObjectCalorieConversionFactor ingredientObjectCalorieConversionFactor = (IngredientObjectCalorieConversionFactor) o;
+    return Objects.equals(this.proteinValue, ingredientObjectCalorieConversionFactor.proteinValue) &&
+        Objects.equals(this.fatValue, ingredientObjectCalorieConversionFactor.fatValue) &&
+        Objects.equals(this.carbohydrateValue, ingredientObjectCalorieConversionFactor.carbohydrateValue);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(chomp, usda);
+    return Objects.hash(proteinValue, fatValue, carbohydrateValue);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class BrandedFoodObjectIngredients {\n");
+    sb.append("class IngredientObjectCalorieConversionFactor {\n");
     
-    sb.append("    chomp: ").append(toIndentedString(chomp)).append("\n");
-    sb.append("    usda: ").append(toIndentedString(usda)).append("\n");
+    sb.append("    proteinValue: ").append(toIndentedString(proteinValue)).append("\n");
+    sb.append("    fatValue: ").append(toIndentedString(fatValue)).append("\n");
+    sb.append("    carbohydrateValue: ").append(toIndentedString(carbohydrateValue)).append("\n");
     sb.append("}");
     return sb.toString();
   }
