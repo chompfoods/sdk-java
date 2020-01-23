@@ -25,7 +25,7 @@ import java.io.IOException;
  * An object containing this item&#x27;s ingredients in order of highest value to least
  */
 @Schema(description = "An object containing this item's ingredients in order of highest value to least")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-22T19:40:24.874Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-23T13:08:00.103Z[GMT]")
 public class BrandedFoodObjectIngredients {
   @SerializedName("chomp")
   private String chomp = null;

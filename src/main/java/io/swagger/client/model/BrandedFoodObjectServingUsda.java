@@ -25,7 +25,7 @@ import java.io.IOException;
  * Serving information from the USDA
  */
 @Schema(description = "Serving information from the USDA")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-22T19:40:24.874Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-23T13:08:00.103Z[GMT]")
 public class BrandedFoodObjectServingUsda {
   @SerializedName("size")
   private String size = null;

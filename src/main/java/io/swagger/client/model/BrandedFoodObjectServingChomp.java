@@ -25,7 +25,7 @@ import java.io.IOException;
  * Serving information from Chomp&#x27;s internal database
  */
 @Schema(description = "Serving information from Chomp's internal database")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-22T19:40:24.874Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-23T13:08:00.103Z[GMT]")
 public class BrandedFoodObjectServingChomp {
   @SerializedName("size")
   private String size = null;
