@@ -3,5 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**chomp** | [**List&lt;BrandedFoodObjectNutrientsChomp&gt;**](BrandedFoodObjectNutrientsChomp.md) | An array containing an object for each nutrient data point |  [optional]
-**usda** | [**List&lt;BrandedFoodObjectNutrientsUsda&gt;**](BrandedFoodObjectNutrientsUsda.md) | An array containing an object for each nutrient data point as found in the USDA database |  [optional]
+**name** | **String** | Nutrient name |  [optional]
+**per100g** | [**BigDecimal**](BigDecimal.md) | Amount of the nutrient per 100g of food |  [optional]
+**measurementUnit** | **String** | The unit used for the measure of this nutrient |  [optional]
+**rank** | **Integer** | Nutrient rank |  [optional]
+**dataPoints** | **Integer** | Number of observations on which the value is based |  [optional]
+**description** | **String** | Description of the nutrient source |  [optional]

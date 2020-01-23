@@ -47,22 +47,6 @@ public class DefaultApiTest {
         // TODO: test validations
     }
     /**
-     * Get a branded food item using an ID number
-     *
-     * ## Get data for a branded food using Chomp&#x27;s internal ID number.  **Example** &gt; &#x60;&#x60;&#x60;https://chompthis.com/api/v2/food/branded/id.php?api_key&#x3D;API_KEY&amp;id&#x3D;ID&#x60;&#x60;&#x60;  **Tips**   * Find a food&#x27;s ID by using our **[food lookup tool](https://chompthis.com/api/lookup.php)**.   * Alternatively, set the \&quot;source\&quot; parameter to \&quot;USDA\&quot; and use the food&#x27;s FDC ID. 
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void foodBrandedIdPhpGetTest() throws ApiException {
-        Integer id = null;
-        String source = null;
-        BrandedFoodObject response = api.foodBrandedIdPhpGet(id, source);
-
-        // TODO: test validations
-    }
-    /**
      * Get a branded food item by name
      *
      * ## Search for branded food items by name.  **Example** &gt; &#x60;&#x60;&#x60;https://chompthis.com/api/v2/food/branded/name.php?api_key&#x3D;API_KEY&amp;name&#x3D;NAME&#x60;&#x60;&#x60;  **Tips**   * Get started by using our **[food lookup tool](https://chompthis.com/api/lookup.php)**.  &gt; This API endpoint is only available to Standard and Premium API subscribers. Please consider upgrading your subscription if you are subscribed to the Limited plan. **[Read this](https://desk.zoho.com/portal/chompthis/kb/articles/can-i-upgrade-downgrade-my-subscription)** if you aren&#x27;t sure how to upgrade your subscription. 

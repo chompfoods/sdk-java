@@ -19,56 +19,75 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.client.model.BrandedFoodObjectServingChomp;
-import io.swagger.client.model.BrandedFoodObjectServingUsda;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 /**
  * An object containing serving information for this item
  */
 @Schema(description = "An object containing serving information for this item")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-23T13:15:58.504Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-23T13:57:41.574Z[GMT]")
 public class BrandedFoodObjectServing {
-  @SerializedName("chomp")
-  private BrandedFoodObjectServingChomp chomp = null;
+  @SerializedName("size")
+  private String size = null;
 
-  @SerializedName("usda")
-  private BrandedFoodObjectServingUsda usda = null;
+  @SerializedName("measurement_unit")
+  private String measurementUnit = null;
 
-  public BrandedFoodObjectServing chomp(BrandedFoodObjectServingChomp chomp) {
-    this.chomp = chomp;
+  @SerializedName("size_fulltext")
+  private String sizeFulltext = null;
+
+  public BrandedFoodObjectServing size(String size) {
+    this.size = size;
     return this;
   }
 
    /**
-   * Get chomp
-   * @return chomp
+   * Serving size
+   * @return size
   **/
-  @Schema(description = "")
-  public BrandedFoodObjectServingChomp getChomp() {
-    return chomp;
+  @Schema(description = "Serving size")
+  public String getSize() {
+    return size;
   }
 
-  public void setChomp(BrandedFoodObjectServingChomp chomp) {
-    this.chomp = chomp;
+  public void setSize(String size) {
+    this.size = size;
   }
 
-  public BrandedFoodObjectServing usda(BrandedFoodObjectServingUsda usda) {
-    this.usda = usda;
+  public BrandedFoodObjectServing measurementUnit(String measurementUnit) {
+    this.measurementUnit = measurementUnit;
     return this;
   }
 
    /**
-   * Get usda
-   * @return usda
+   * Measurement unit for each serving (e.g. if measure is 3 tsp, the unit is tsp)
+   * @return measurementUnit
   **/
-  @Schema(description = "")
-  public BrandedFoodObjectServingUsda getUsda() {
-    return usda;
+  @Schema(description = "Measurement unit for each serving (e.g. if measure is 3 tsp, the unit is tsp)")
+  public String getMeasurementUnit() {
+    return measurementUnit;
   }
 
-  public void setUsda(BrandedFoodObjectServingUsda usda) {
-    this.usda = usda;
+  public void setMeasurementUnit(String measurementUnit) {
+    this.measurementUnit = measurementUnit;
+  }
+
+  public BrandedFoodObjectServing sizeFulltext(String sizeFulltext) {
+    this.sizeFulltext = sizeFulltext;
+    return this;
+  }
+
+   /**
+   * Serving size description
+   * @return sizeFulltext
+  **/
+  @Schema(description = "Serving size description")
+  public String getSizeFulltext() {
+    return sizeFulltext;
+  }
+
+  public void setSizeFulltext(String sizeFulltext) {
+    this.sizeFulltext = sizeFulltext;
   }
 
 
@@ -81,13 +100,14 @@ public class BrandedFoodObjectServing {
       return false;
     }
     BrandedFoodObjectServing brandedFoodObjectServing = (BrandedFoodObjectServing) o;
-    return Objects.equals(this.chomp, brandedFoodObjectServing.chomp) &&
-        Objects.equals(this.usda, brandedFoodObjectServing.usda);
+    return Objects.equals(this.size, brandedFoodObjectServing.size) &&
+        Objects.equals(this.measurementUnit, brandedFoodObjectServing.measurementUnit) &&
+        Objects.equals(this.sizeFulltext, brandedFoodObjectServing.sizeFulltext);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(chomp, usda);
+    return Objects.hash(size, measurementUnit, sizeFulltext);
   }
 
 
@@ -96,8 +116,9 @@ public class BrandedFoodObjectServing {
     StringBuilder sb = new StringBuilder();
     sb.append("class BrandedFoodObjectServing {\n");
     
-    sb.append("    chomp: ").append(toIndentedString(chomp)).append("\n");
-    sb.append("    usda: ").append(toIndentedString(usda)).append("\n");
+    sb.append("    size: ").append(toIndentedString(size)).append("\n");
+    sb.append("    measurementUnit: ").append(toIndentedString(measurementUnit)).append("\n");
+    sb.append("    sizeFulltext: ").append(toIndentedString(sizeFulltext)).append("\n");
     sb.append("}");
     return sb.toString();
   }

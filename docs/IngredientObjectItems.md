@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **String** | Item name as provided by brand owner or as shown on packaging |  [optional]
 **categories** | **List&lt;String&gt;** |  |  [optional]
-**nutrients** | [**IngredientObjectNutrients**](IngredientObjectNutrients.md) |  |  [optional]
+**nutrients** | [**List&lt;IngredientObjectNutrients&gt;**](IngredientObjectNutrients.md) | An array containing nutrient informatio objects for this food item |  [optional]
 **calorieConversionFactor** | [**IngredientObjectCalorieConversionFactor**](IngredientObjectCalorieConversionFactor.md) |  |  [optional]
 **proteinConversionFactor** | [**BigDecimal**](BigDecimal.md) | The multiplication factor used to calculate protein from nitrogen |  [optional]
 **dietLabels** | [**BrandedFoodObjectDietLabels**](BrandedFoodObjectDietLabels.md) |  |  [optional]

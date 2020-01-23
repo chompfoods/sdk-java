@@ -33,7 +33,7 @@ import java.util.List;
  * An object containing information for this specific item.
  */
 @Schema(description = "An object containing information for this specific item.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-23T13:15:58.504Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-23T13:57:41.574Z[GMT]")
 public class IngredientObjectItems {
   @SerializedName("name")
   private String name = null;
@@ -42,7 +42,7 @@ public class IngredientObjectItems {
   private List<String> categories = null;
 
   @SerializedName("nutrients")
-  private IngredientObjectNutrients nutrients = null;
+  private List<IngredientObjectNutrients> nutrients = null;
 
   @SerializedName("calorie_conversion_factor")
   private IngredientObjectCalorieConversionFactor calorieConversionFactor = null;
@@ -112,21 +112,29 @@ public class IngredientObjectItems {
     this.categories = categories;
   }
 
-  public IngredientObjectItems nutrients(IngredientObjectNutrients nutrients) {
+  public IngredientObjectItems nutrients(List<IngredientObjectNutrients> nutrients) {
     this.nutrients = nutrients;
     return this;
   }
 
+  public IngredientObjectItems addNutrientsItem(IngredientObjectNutrients nutrientsItem) {
+    if (this.nutrients == null) {
+      this.nutrients = new ArrayList<IngredientObjectNutrients>();
+    }
+    this.nutrients.add(nutrientsItem);
+    return this;
+  }
+
    /**
-   * Get nutrients
+   * An array containing nutrient informatio objects for this food item
    * @return nutrients
   **/
-  @Schema(description = "")
-  public IngredientObjectNutrients getNutrients() {
+  @Schema(description = "An array containing nutrient informatio objects for this food item")
+  public List<IngredientObjectNutrients> getNutrients() {
     return nutrients;
   }
 
-  public void setNutrients(IngredientObjectNutrients nutrients) {
+  public void setNutrients(List<IngredientObjectNutrients> nutrients) {
     this.nutrients = nutrients;
   }
 

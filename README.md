@@ -2,7 +2,7 @@
 
 Chomp Food Database API Documentation
 - API version: 1.0.0-oas3
-  - Build date: 2020-01-23T13:15:58.504Z[GMT]
+  - Build date: 2020-01-23T13:57:41.574Z[GMT]
 
 ## Important An **[API key](https://chompthis.com/api/)** is required for access to this API. Get yours at **[https://chompthis.com/api](https://chompthis.com/api/)**.  ### Getting Started   * **[Subscribe](https://chompthis.com/api/#pricing)** to the API.   * Scroll down and click the \"**Authorize**\" button.   * Enter your API key into the \"**value**\" input, click the \"**Authorize**\" button, then click the \"**Close**\" button.   * Scroll down to the section titled \"**default**\" and click on the API endpoint you wish to use.   * Click the \"**Try it out**\" button.   * Enter the information the endpoint requires.   * Click the \"**Execute**\" button.  ### Example    * Branded food response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/branded-food-response-object.json)**   * Ingredient response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/ingredient-response-object.json)**  ### How Do I Find My API Key?   * Your API key was sent to the email address you used to create your subscription.   * You will also find your API key in the **[Client Center](https://chompthis.com/api/manage.php)**.   * Read **[this article](https://desk.zoho.com/portal/chompthis/kb/articles/how-do-i-find-my-api-key)** for more information.  ||| | ------- | -------- | | [Knowledge Base](https://desk.zoho.com/portal/chompthis/kb/chomp) | [Pricing](https://chompthis.com/api/) | | [Attribution](https://chompthis.com/api/docs/attribution.php) | [Cost Calculator](https://chompthis.com/api/cost-calculator.php) | | [Terms & License](https://chompthis.com/api/terms.php) | [Database Search](https://chompthis.com/api/lookup.php) | | [Support](https://chompthis.com/api/ticket-new.php) | [Query Builder](https://chompthis.com/api/build.php) | | [Client Center](https://chompthis.com/api/manage.php) | | 
 
@@ -97,37 +97,6 @@ public class DefaultApiExample {
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling DefaultApi#foodBrandedBarcodePhpGet");
-            e.printStackTrace();
-        }
-    }
-}
-import io.swagger.client.*;
-import io.swagger.client.auth.*;
-import io.swagger.client.model.*;
-import io.swagger.client.api.DefaultApi;
-
-import java.io.File;
-import java.util.*;
-
-public class DefaultApiExample {
-
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-        // Configure API key authorization: ApiKeyAuth
-        ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
-        ApiKeyAuth.setApiKey("YOUR API KEY");
-        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-        //ApiKeyAuth.setApiKeyPrefix("Token");
-
-        DefaultApi apiInstance = new DefaultApi();
-        Integer id = 56; // Integer | #### The ID number of a branded food item.  **Example #1: Using Chomp ID** > ```&id=15```  **Example #2: Using FDC ID** > ```&id=FDC_ID&source=USDA``` 
-        String source = "source_example"; // String | #### Configure the endpoint to accept food IDs from various data sources. This endpoint defaults to Chomp but can accept FDC IDs.  **Example** > ```&source=Chomp```  **Tips**   * Pass in ```&source=USDA``` if you want to look up food items using a USDA FDC ID. 
-        try {
-            BrandedFoodObject result = apiInstance.foodBrandedIdPhpGet(id, source);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling DefaultApi#foodBrandedIdPhpGet");
             e.printStackTrace();
         }
     }
@@ -249,7 +218,6 @@ All URIs are relative to *https://chompthis.com/api/v2*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *DefaultApi* | [**foodBrandedBarcodePhpGet**](docs/DefaultApi.md#foodBrandedBarcodePhpGet) | **GET** /food/branded/barcode.php | Get a branded food item using a barcode
-*DefaultApi* | [**foodBrandedIdPhpGet**](docs/DefaultApi.md#foodBrandedIdPhpGet) | **GET** /food/branded/id.php | Get a branded food item using an ID number
 *DefaultApi* | [**foodBrandedNamePhpGet**](docs/DefaultApi.md#foodBrandedNamePhpGet) | **GET** /food/branded/name.php | Get a branded food item by name
 *DefaultApi* | [**foodBrandedSearchPhpGet**](docs/DefaultApi.md#foodBrandedSearchPhpGet) | **GET** /food/branded/search.php | Get data for branded food items using various search parameters
 *DefaultApi* | [**foodIngredientSearchPhpGet**](docs/DefaultApi.md#foodIngredientSearchPhpGet) | **GET** /food/ingredient/search.php | Get raw/generic food ingredient item(s)
@@ -263,19 +231,14 @@ Class | Method | HTTP request | Description
  - [BrandedFoodObjectDietLabelsGlutenFree](docs/BrandedFoodObjectDietLabelsGlutenFree.md)
  - [BrandedFoodObjectDietLabelsVegan](docs/BrandedFoodObjectDietLabelsVegan.md)
  - [BrandedFoodObjectDietLabelsVegetarian](docs/BrandedFoodObjectDietLabelsVegetarian.md)
- - [BrandedFoodObjectIngredients](docs/BrandedFoodObjectIngredients.md)
  - [BrandedFoodObjectItems](docs/BrandedFoodObjectItems.md)
  - [BrandedFoodObjectNutrients](docs/BrandedFoodObjectNutrients.md)
- - [BrandedFoodObjectNutrientsChomp](docs/BrandedFoodObjectNutrientsChomp.md)
- - [BrandedFoodObjectNutrientsUsda](docs/BrandedFoodObjectNutrientsUsda.md)
  - [BrandedFoodObjectPackage](docs/BrandedFoodObjectPackage.md)
  - [BrandedFoodObjectPackagingPhotos](docs/BrandedFoodObjectPackagingPhotos.md)
  - [BrandedFoodObjectPackagingPhotosFront](docs/BrandedFoodObjectPackagingPhotosFront.md)
  - [BrandedFoodObjectPackagingPhotosIngredients](docs/BrandedFoodObjectPackagingPhotosIngredients.md)
  - [BrandedFoodObjectPackagingPhotosNutrition](docs/BrandedFoodObjectPackagingPhotosNutrition.md)
  - [BrandedFoodObjectServing](docs/BrandedFoodObjectServing.md)
- - [BrandedFoodObjectServingChomp](docs/BrandedFoodObjectServingChomp.md)
- - [BrandedFoodObjectServingUsda](docs/BrandedFoodObjectServingUsda.md)
  - [IngredientObject](docs/IngredientObject.md)
  - [IngredientObjectCalorieConversionFactor](docs/IngredientObjectCalorieConversionFactor.md)
  - [IngredientObjectComponents](docs/IngredientObjectComponents.md)
