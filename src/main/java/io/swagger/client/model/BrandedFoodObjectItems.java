@@ -20,7 +20,6 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import io.swagger.client.model.BrandedFoodObjectCalorieConversionFactor;
-import io.swagger.client.model.BrandedFoodObjectComponents;
 import io.swagger.client.model.BrandedFoodObjectCountryDetails;
 import io.swagger.client.model.BrandedFoodObjectDietFlags;
 import io.swagger.client.model.BrandedFoodObjectDietLabels;
@@ -28,7 +27,6 @@ import io.swagger.client.model.BrandedFoodObjectIngredients;
 import io.swagger.client.model.BrandedFoodObjectNutrients;
 import io.swagger.client.model.BrandedFoodObjectPackage;
 import io.swagger.client.model.BrandedFoodObjectPackagingPhotos;
-import io.swagger.client.model.BrandedFoodObjectPortions;
 import io.swagger.client.model.BrandedFoodObjectServing;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
@@ -39,7 +37,7 @@ import java.util.List;
  * An object containing information for this specific item.
  */
 @Schema(description = "An object containing information for this specific item.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-23T13:08:00.103Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-23T13:12:53.531Z[GMT]")
 public class BrandedFoodObjectItems {
   @SerializedName("barcode")
   private String barcode = null;
@@ -79,12 +77,6 @@ public class BrandedFoodObjectItems {
 
   @SerializedName("packaging_photos")
   private BrandedFoodObjectPackagingPhotos packagingPhotos = null;
-
-  @SerializedName("components")
-  private List<BrandedFoodObjectComponents> components = null;
-
-  @SerializedName("portions")
-  private List<BrandedFoodObjectPortions> portions = null;
 
   @SerializedName("allergens")
   private List<String> allergens = null;
@@ -373,58 +365,6 @@ public class BrandedFoodObjectItems {
 
   public void setPackagingPhotos(BrandedFoodObjectPackagingPhotos packagingPhotos) {
     this.packagingPhotos = packagingPhotos;
-  }
-
-  public BrandedFoodObjectItems components(List<BrandedFoodObjectComponents> components) {
-    this.components = components;
-    return this;
-  }
-
-  public BrandedFoodObjectItems addComponentsItem(BrandedFoodObjectComponents componentsItem) {
-    if (this.components == null) {
-      this.components = new ArrayList<BrandedFoodObjectComponents>();
-    }
-    this.components.add(componentsItem);
-    return this;
-  }
-
-   /**
-   * An array of objects containing the constituent parts of a food (e.g. bone is a component of meat)
-   * @return components
-  **/
-  @Schema(description = "An array of objects containing the constituent parts of a food (e.g. bone is a component of meat)")
-  public List<BrandedFoodObjectComponents> getComponents() {
-    return components;
-  }
-
-  public void setComponents(List<BrandedFoodObjectComponents> components) {
-    this.components = components;
-  }
-
-  public BrandedFoodObjectItems portions(List<BrandedFoodObjectPortions> portions) {
-    this.portions = portions;
-    return this;
-  }
-
-  public BrandedFoodObjectItems addPortionsItem(BrandedFoodObjectPortions portionsItem) {
-    if (this.portions == null) {
-      this.portions = new ArrayList<BrandedFoodObjectPortions>();
-    }
-    this.portions.add(portionsItem);
-    return this;
-  }
-
-   /**
-   * An array of objects containing information on discrete amounts of a food found in this item
-   * @return portions
-  **/
-  @Schema(description = "An array of objects containing information on discrete amounts of a food found in this item")
-  public List<BrandedFoodObjectPortions> getPortions() {
-    return portions;
-  }
-
-  public void setPortions(List<BrandedFoodObjectPortions> portions) {
-    this.portions = portions;
   }
 
   public BrandedFoodObjectItems allergens(List<String> allergens) {
@@ -756,8 +696,6 @@ public class BrandedFoodObjectItems {
         Objects.equals(this.dietLabels, brandedFoodObjectItems.dietLabels) &&
         Objects.equals(this.dietFlags, brandedFoodObjectItems.dietFlags) &&
         Objects.equals(this.packagingPhotos, brandedFoodObjectItems.packagingPhotos) &&
-        Objects.equals(this.components, brandedFoodObjectItems.components) &&
-        Objects.equals(this.portions, brandedFoodObjectItems.portions) &&
         Objects.equals(this.allergens, brandedFoodObjectItems.allergens) &&
         Objects.equals(this.brandList, brandedFoodObjectItems.brandList) &&
         Objects.equals(this.countries, brandedFoodObjectItems.countries) &&
@@ -775,7 +713,7 @@ public class BrandedFoodObjectItems {
 
   @Override
   public int hashCode() {
-    return Objects.hash(barcode, name, brand, ingredients, _package, serving, categories, nutrients, calorieConversionFactor, proteinConversionFactor, dietLabels, dietFlags, packagingPhotos, components, portions, allergens, brandList, countries, countryDetails, palmOilIngredients, ingredientList, hasEnglishIngredients, minerals, traces, vitamins, description, keywords, footnote);
+    return Objects.hash(barcode, name, brand, ingredients, _package, serving, categories, nutrients, calorieConversionFactor, proteinConversionFactor, dietLabels, dietFlags, packagingPhotos, allergens, brandList, countries, countryDetails, palmOilIngredients, ingredientList, hasEnglishIngredients, minerals, traces, vitamins, description, keywords, footnote);
   }
 
 
@@ -797,8 +735,6 @@ public class BrandedFoodObjectItems {
     sb.append("    dietLabels: ").append(toIndentedString(dietLabels)).append("\n");
     sb.append("    dietFlags: ").append(toIndentedString(dietFlags)).append("\n");
     sb.append("    packagingPhotos: ").append(toIndentedString(packagingPhotos)).append("\n");
-    sb.append("    components: ").append(toIndentedString(components)).append("\n");
-    sb.append("    portions: ").append(toIndentedString(portions)).append("\n");
     sb.append("    allergens: ").append(toIndentedString(allergens)).append("\n");
     sb.append("    brandList: ").append(toIndentedString(brandList)).append("\n");
     sb.append("    countries: ").append(toIndentedString(countries)).append("\n");
