@@ -25,7 +25,7 @@ import java.io.IOException;
  * An object containing basic packaging information about this item
  */
 @Schema(description = "An object containing basic packaging information about this item")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-27T21:18:02.282Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-27T21:28:00.314Z[GMT]")
 public class BrandedFoodObjectPackage {
   @SerializedName("quantity")
   private Integer quantity = null;
