@@ -528,7 +528,7 @@ public class DefaultApi {
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      */
-    public com.squareup.okhttp.Call foodIngredientSearchPhpGetCall(Integer find, Boolean raw, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    public com.squareup.okhttp.Call foodIngredientSearchPhpGetCall(String find, Boolean raw, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // create path and map variables
@@ -576,7 +576,7 @@ public class DefaultApi {
     }
     
     @SuppressWarnings("rawtypes")
-    private com.squareup.okhttp.Call foodIngredientSearchPhpGetValidateBeforeCall(Integer find, Boolean raw, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call foodIngredientSearchPhpGetValidateBeforeCall(String find, Boolean raw, Integer limit, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         // verify the required parameter 'find' is set
         if (find == null) {
             throw new ApiException("Missing the required parameter 'find' when calling foodIngredientSearchPhpGet(Async)");
@@ -600,7 +600,7 @@ public class DefaultApi {
      * @return IngredientObject
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public IngredientObject foodIngredientSearchPhpGet(Integer find, Boolean raw, Integer limit) throws ApiException {
+    public IngredientObject foodIngredientSearchPhpGet(String find, Boolean raw, Integer limit) throws ApiException {
         ApiResponse<IngredientObject> resp = foodIngredientSearchPhpGetWithHttpInfo(find, raw, limit);
         return resp.getData();
     }
@@ -614,7 +614,7 @@ public class DefaultApi {
      * @return ApiResponse&lt;IngredientObject&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<IngredientObject> foodIngredientSearchPhpGetWithHttpInfo(Integer find, Boolean raw, Integer limit) throws ApiException {
+    public ApiResponse<IngredientObject> foodIngredientSearchPhpGetWithHttpInfo(String find, Boolean raw, Integer limit) throws ApiException {
         com.squareup.okhttp.Call call = foodIngredientSearchPhpGetValidateBeforeCall(find, raw, limit, null, null);
         Type localVarReturnType = new TypeToken<IngredientObject>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
@@ -630,7 +630,7 @@ public class DefaultApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call foodIngredientSearchPhpGetAsync(Integer find, Boolean raw, Integer limit, final ApiCallback<IngredientObject> callback) throws ApiException {
+    public com.squareup.okhttp.Call foodIngredientSearchPhpGetAsync(String find, Boolean raw, Integer limit, final ApiCallback<IngredientObject> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;

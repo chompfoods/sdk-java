@@ -101,7 +101,7 @@ public class DefaultApiTest {
      */
     @Test
     public void foodIngredientSearchPhpGetTest() throws ApiException {
-        Integer find = null;
+        String find = null;
         Boolean raw = null;
         Integer limit = null;
         IngredientObject response = api.foodIngredientSearchPhpGet(find, raw, limit);
