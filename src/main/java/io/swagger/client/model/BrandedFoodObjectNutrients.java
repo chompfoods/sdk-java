@@ -26,7 +26,7 @@ import java.math.BigDecimal;
  * An object containing information for a specific nutrient found in this food item
  */
 @Schema(description = "An object containing information for a specific nutrient found in this food item")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-25T22:35:03.251Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-27T21:16:22.950Z[GMT]")
 public class BrandedFoodObjectNutrients {
   @SerializedName("name")
   private String name = null;
