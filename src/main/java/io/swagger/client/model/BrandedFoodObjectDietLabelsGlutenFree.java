@@ -25,7 +25,7 @@ import java.io.IOException;
  * An object containing information on this item&#x27;s compatibility with Gluten Free diets
  */
 @Schema(description = "An object containing information on this item's compatibility with Gluten Free diets")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-28T13:53:56.663Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-28T14:07:08.259Z[GMT]")
 public class BrandedFoodObjectDietLabelsGlutenFree {
   @SerializedName("name")
   private String name = null;
