@@ -1,6 +1,6 @@
 /*
  * Chomp Food Database API Documentation
- * __Important:__   - An __[API key](https://chompthis.com/api/)__ is required for access to this API.   - Get yours at __[https://chompthis.com/api](https://chompthis.com/api/)__.  -----  __Getting Started:__   - __[Subscribe](https://chompthis.com/api/#pricing)__ to the API.   - Scroll down and click the \"__Authorize__\" button.   - Enter your API key into the \"__value__\" input, click the \"__Authorize__\" button, then click the \"__Close__\" button.   - Scroll down to the section titled \"__default__\" and click on the API endpoint you wish to use.   - Click the \"__Try it out__\" button.   - Enter the information the endpoint requires.   - Click the \"__Execute__\" button.  __Example:__    - __[View example](https://raw.githubusercontent.com/chompfoods/examples/master/response-object.json)__ API response object.  -----  __How Do I Find My API Key?__   - Your API key was sent to the email address you used to create your subscription.   - You will also find your API key in the __[Client Center](https://chompthis.com/api/manage.php)__.   - _Read __[this article](https://desk.zoho.com/portal/chompthis/kb/articles/how-do-i-find-my-api-key)__ for more information._  ||| | ------- | -------- | | [Knowledge Base](https://desk.zoho.com/portal/chompthis/kb/chomp) | [Pricing](https://chompthis.com/api/) | | [Attribution](https://chompthis.com/api/docs/attribution.php) | [Cost Calculator](https://chompthis.com/api/cost-calculator.php) | | [Terms & License](https://chompthis.com/api/terms.php) | [Database Search](https://chompthis.com/api/lookup.php) | | [Support](https://chompthis.com/api/ticket-new.php) | [Query Builder](https://chompthis.com/api/build.php) | | [Client Center](https://chompthis.com/api/manage.php) | | 
+ * ## Important An **[API key](https://chompthis.com/api/)** is required for access to this API. Get yours at **[https://chompthis.com/api](https://chompthis.com/api/)**.  ### Getting Started   * **[Subscribe](https://chompthis.com/api/#pricing)** to the API.   * Scroll down and click the \"**Authorize**\" button.   * Enter your API key into the \"**value**\" input, click the \"**Authorize**\" button, then click the \"**Close**\" button.   * Scroll down to the section titled \"**default**\" and click on the API endpoint you wish to use.   * Click the \"**Try it out**\" button.   * Enter the information the endpoint requires.   * Click the \"**Execute**\" button.  ### Example    * Branded food response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/branded-food-response-object.json)**   * Ingredient response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/ingredient-response-object.json)**   * Error response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/error-response-object.json)**  ### How Do I Find My API Key?   * Your API key was sent to the email address you used to create your subscription.   * You will also find your API key in the **[Client Center](https://chompthis.com/api/manage.php)**.   * Read **[this article](https://desk.zoho.com/portal/chompthis/kb/articles/how-do-i-find-my-api-key)** for more information.  ### Helpful Links   * **Help & Support**     * [Knowledge Base &raquo;](https://desk.zoho.com/portal/chompthis/kb/chomp)     * [Support &raquo;](https://chompthis.com/api/ticket-new.php)     * [Client Center &raquo;](https://chompthis.com/api/manage.php)   * **Pricing**     * [Subscription Options &raquo;](https://chompthis.com/api/)     * [Cost Calculator &raquo;](https://chompthis.com/api/cost-calculator.php)   * **Guidelines**     * [Terms & License &raquo;](https://chompthis.com/api/terms.php)     * [Attribution &raquo;](https://chompthis.com/api/docs/attribution.php) 
  *
  * OpenAPI spec version: 1.0.0-oas3
  * 
@@ -19,11 +19,10 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import io.swagger.client.model.BrandedFoodObjectCalorieConversionFactor;
-import io.swagger.client.model.BrandedFoodObjectComponents;
-import io.swagger.client.model.BrandedFoodObjectDietLabels;
-import io.swagger.client.model.BrandedFoodObjectPortions;
+import io.swagger.client.model.IngredientObjectCalorieConversionFactor;
+import io.swagger.client.model.IngredientObjectComponents;
 import io.swagger.client.model.IngredientObjectNutrients;
+import io.swagger.client.model.IngredientObjectPortions;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 import java.math.BigDecimal;
@@ -33,7 +32,7 @@ import java.util.List;
  * An object containing information for this specific item.
  */
 @Schema(description = "An object containing information for this specific item.")
-@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-18T04:04:03.122Z[GMT]")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2020-01-30T02:08:15.933Z[GMT]")
 public class IngredientObjectItems {
   @SerializedName("name")
   private String name = null;
@@ -42,31 +41,31 @@ public class IngredientObjectItems {
   private List<String> categories = null;
 
   @SerializedName("nutrients")
-  private IngredientObjectNutrients nutrients = null;
+  private List<IngredientObjectNutrients> nutrients = null;
 
   @SerializedName("calorie_conversion_factor")
-  private BrandedFoodObjectCalorieConversionFactor calorieConversionFactor = null;
+  private IngredientObjectCalorieConversionFactor calorieConversionFactor = null;
 
   @SerializedName("protein_conversion_factor")
   private BigDecimal proteinConversionFactor = null;
 
-  @SerializedName("diet_labels")
-  private BrandedFoodObjectDietLabels dietLabels = null;
-
   @SerializedName("components")
-  private List<BrandedFoodObjectComponents> components = null;
+  private List<IngredientObjectComponents> components = null;
 
   @SerializedName("portions")
-  private List<BrandedFoodObjectPortions> portions = null;
+  private List<IngredientObjectPortions> portions = null;
 
   @SerializedName("common_name")
   private String commonName = null;
 
-  @SerializedName("description")
-  private String description = null;
-
   @SerializedName("footnote")
   private String footnote = null;
+
+  @SerializedName("search_term")
+  private String searchTerm = null;
+
+  @SerializedName("score")
+  private String score = null;
 
   public IngredientObjectItems name(String name) {
     this.name = name;
@@ -112,25 +111,33 @@ public class IngredientObjectItems {
     this.categories = categories;
   }
 
-  public IngredientObjectItems nutrients(IngredientObjectNutrients nutrients) {
+  public IngredientObjectItems nutrients(List<IngredientObjectNutrients> nutrients) {
     this.nutrients = nutrients;
     return this;
   }
 
+  public IngredientObjectItems addNutrientsItem(IngredientObjectNutrients nutrientsItem) {
+    if (this.nutrients == null) {
+      this.nutrients = new ArrayList<IngredientObjectNutrients>();
+    }
+    this.nutrients.add(nutrientsItem);
+    return this;
+  }
+
    /**
-   * Get nutrients
+   * An array containing nutrient informatio objects for this food item
    * @return nutrients
   **/
-  @Schema(description = "")
-  public IngredientObjectNutrients getNutrients() {
+  @Schema(description = "An array containing nutrient informatio objects for this food item")
+  public List<IngredientObjectNutrients> getNutrients() {
     return nutrients;
   }
 
-  public void setNutrients(IngredientObjectNutrients nutrients) {
+  public void setNutrients(List<IngredientObjectNutrients> nutrients) {
     this.nutrients = nutrients;
   }
 
-  public IngredientObjectItems calorieConversionFactor(BrandedFoodObjectCalorieConversionFactor calorieConversionFactor) {
+  public IngredientObjectItems calorieConversionFactor(IngredientObjectCalorieConversionFactor calorieConversionFactor) {
     this.calorieConversionFactor = calorieConversionFactor;
     return this;
   }
@@ -140,11 +147,11 @@ public class IngredientObjectItems {
    * @return calorieConversionFactor
   **/
   @Schema(description = "")
-  public BrandedFoodObjectCalorieConversionFactor getCalorieConversionFactor() {
+  public IngredientObjectCalorieConversionFactor getCalorieConversionFactor() {
     return calorieConversionFactor;
   }
 
-  public void setCalorieConversionFactor(BrandedFoodObjectCalorieConversionFactor calorieConversionFactor) {
+  public void setCalorieConversionFactor(IngredientObjectCalorieConversionFactor calorieConversionFactor) {
     this.calorieConversionFactor = calorieConversionFactor;
   }
 
@@ -166,32 +173,14 @@ public class IngredientObjectItems {
     this.proteinConversionFactor = proteinConversionFactor;
   }
 
-  public IngredientObjectItems dietLabels(BrandedFoodObjectDietLabels dietLabels) {
-    this.dietLabels = dietLabels;
-    return this;
-  }
-
-   /**
-   * Get dietLabels
-   * @return dietLabels
-  **/
-  @Schema(description = "")
-  public BrandedFoodObjectDietLabels getDietLabels() {
-    return dietLabels;
-  }
-
-  public void setDietLabels(BrandedFoodObjectDietLabels dietLabels) {
-    this.dietLabels = dietLabels;
-  }
-
-  public IngredientObjectItems components(List<BrandedFoodObjectComponents> components) {
+  public IngredientObjectItems components(List<IngredientObjectComponents> components) {
     this.components = components;
     return this;
   }
 
-  public IngredientObjectItems addComponentsItem(BrandedFoodObjectComponents componentsItem) {
+  public IngredientObjectItems addComponentsItem(IngredientObjectComponents componentsItem) {
     if (this.components == null) {
-      this.components = new ArrayList<BrandedFoodObjectComponents>();
+      this.components = new ArrayList<IngredientObjectComponents>();
     }
     this.components.add(componentsItem);
     return this;
@@ -202,22 +191,22 @@ public class IngredientObjectItems {
    * @return components
   **/
   @Schema(description = "An array of objects containing the constituent parts of a food (e.g. bone is a component of meat)")
-  public List<BrandedFoodObjectComponents> getComponents() {
+  public List<IngredientObjectComponents> getComponents() {
     return components;
   }
 
-  public void setComponents(List<BrandedFoodObjectComponents> components) {
+  public void setComponents(List<IngredientObjectComponents> components) {
     this.components = components;
   }
 
-  public IngredientObjectItems portions(List<BrandedFoodObjectPortions> portions) {
+  public IngredientObjectItems portions(List<IngredientObjectPortions> portions) {
     this.portions = portions;
     return this;
   }
 
-  public IngredientObjectItems addPortionsItem(BrandedFoodObjectPortions portionsItem) {
+  public IngredientObjectItems addPortionsItem(IngredientObjectPortions portionsItem) {
     if (this.portions == null) {
-      this.portions = new ArrayList<BrandedFoodObjectPortions>();
+      this.portions = new ArrayList<IngredientObjectPortions>();
     }
     this.portions.add(portionsItem);
     return this;
@@ -228,11 +217,11 @@ public class IngredientObjectItems {
    * @return portions
   **/
   @Schema(description = "An array of objects containing information on discrete amounts of a food found in this item")
-  public List<BrandedFoodObjectPortions> getPortions() {
+  public List<IngredientObjectPortions> getPortions() {
     return portions;
   }
 
-  public void setPortions(List<BrandedFoodObjectPortions> portions) {
+  public void setPortions(List<IngredientObjectPortions> portions) {
     this.portions = portions;
   }
 
@@ -242,10 +231,10 @@ public class IngredientObjectItems {
   }
 
    /**
-   * Common names associated with this item. These generally clarify what the item is (e.g. when the brand name is \&quot;BRAND&#x27;s Spicy Enchilada\&quot; the common name may be \&quot;Chicken enchilada\&quot;)
+   * Common name associated with this item. These generally clarify what the item is (e.g. when the brand name is \&quot;BRAND&#x27;s Spicy Enchilada\&quot; the common name may be \&quot;Chicken enchilada\&quot;)
    * @return commonName
   **/
-  @Schema(description = "Common names associated with this item. These generally clarify what the item is (e.g. when the brand name is \"BRAND's Spicy Enchilada\" the common name may be \"Chicken enchilada\")")
+  @Schema(description = "Common name associated with this item. These generally clarify what the item is (e.g. when the brand name is \"BRAND's Spicy Enchilada\" the common name may be \"Chicken enchilada\")")
   public String getCommonName() {
     return commonName;
   }
@@ -254,40 +243,58 @@ public class IngredientObjectItems {
     this.commonName = commonName;
   }
 
-  public IngredientObjectItems description(String description) {
-    this.description = description;
-    return this;
-  }
-
-   /**
-   * A description of this item
-   * @return description
-  **/
-  @Schema(description = "A description of this item")
-  public String getDescription() {
-    return description;
-  }
-
-  public void setDescription(String description) {
-    this.description = description;
-  }
-
   public IngredientObjectItems footnote(String footnote) {
     this.footnote = footnote;
     return this;
   }
 
    /**
-   * Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall.
+   * Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall
    * @return footnote
   **/
-  @Schema(description = "Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall.")
+  @Schema(description = "Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall")
   public String getFootnote() {
     return footnote;
   }
 
   public void setFootnote(String footnote) {
     this.footnote = footnote;
+  }
+
+  public IngredientObjectItems searchTerm(String searchTerm) {
+    this.searchTerm = searchTerm;
+    return this;
+  }
+
+   /**
+   * The original search term that found this food item
+   * @return searchTerm
+  **/
+  @Schema(description = "The original search term that found this food item")
+  public String getSearchTerm() {
+    return searchTerm;
+  }
+
+  public void setSearchTerm(String searchTerm) {
+    this.searchTerm = searchTerm;
+  }
+
+  public IngredientObjectItems score(String score) {
+    this.score = score;
+    return this;
+  }
+
+   /**
+   * A value that represents how similar the name of this food item is to the original search term. The lower the value the closer this item&#x27;s name is to the original search term.
+   * @return score
+  **/
+  @Schema(description = "A value that represents how similar the name of this food item is to the original search term. The lower the value the closer this item's name is to the original search term.")
+  public String getScore() {
+    return score;
+  }
+
+  public void setScore(String score) {
+    this.score = score;
   }
 
 
@@ -305,17 +312,17 @@ public class IngredientObjectItems {
         Objects.equals(this.nutrients, ingredientObjectItems.nutrients) &&
         Objects.equals(this.calorieConversionFactor, ingredientObjectItems.calorieConversionFactor) &&
         Objects.equals(this.proteinConversionFactor, ingredientObjectItems.proteinConversionFactor) &&
-        Objects.equals(this.dietLabels, ingredientObjectItems.dietLabels) &&
         Objects.equals(this.components, ingredientObjectItems.components) &&
         Objects.equals(this.portions, ingredientObjectItems.portions) &&
         Objects.equals(this.commonName, ingredientObjectItems.commonName) &&
-        Objects.equals(this.description, ingredientObjectItems.description) &&
-        Objects.equals(this.footnote, ingredientObjectItems.footnote);
+        Objects.equals(this.footnote, ingredientObjectItems.footnote) &&
+        Objects.equals(this.searchTerm, ingredientObjectItems.searchTerm) &&
+        Objects.equals(this.score, ingredientObjectItems.score);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, categories, nutrients, calorieConversionFactor, proteinConversionFactor, dietLabels, components, portions, commonName, description, footnote);
+    return Objects.hash(name, categories, nutrients, calorieConversionFactor, proteinConversionFactor, components, portions, commonName, footnote, searchTerm, score);
   }
 
 
@@ -329,12 +336,12 @@ public class IngredientObjectItems {
     sb.append("    nutrients: ").append(toIndentedString(nutrients)).append("\n");
     sb.append("    calorieConversionFactor: ").append(toIndentedString(calorieConversionFactor)).append("\n");
     sb.append("    proteinConversionFactor: ").append(toIndentedString(proteinConversionFactor)).append("\n");
-    sb.append("    dietLabels: ").append(toIndentedString(dietLabels)).append("\n");
     sb.append("    components: ").append(toIndentedString(components)).append("\n");
     sb.append("    portions: ").append(toIndentedString(portions)).append("\n");
     sb.append("    commonName: ").append(toIndentedString(commonName)).append("\n");
-    sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    footnote: ").append(toIndentedString(footnote)).append("\n");
+    sb.append("    searchTerm: ").append(toIndentedString(searchTerm)).append("\n");
+    sb.append("    score: ").append(toIndentedString(score)).append("\n");
     sb.append("}");
     return sb.toString();
   }
