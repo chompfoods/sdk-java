@@ -10,71 +10,105 @@
  * Do not edit the class manually.
  */
 
-package io.swagger.client;
+package io.swagger.client.model;
 
-import com.squareup.okhttp.*;
-import okio.Buffer;
-import okio.BufferedSink;
-import okio.GzipSink;
-import okio.Okio;
-
+import java.util.Objects;
+import java.util.Arrays;
+import com.google.gson.TypeAdapter;
+import com.google.gson.annotations.JsonAdapter;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
-
 /**
- * Encodes request bodies using gzip.
- *
- * Taken from https://github.com/square/okhttp/issues/350
+ * An object containing information about a specific recipe ingredient
  */
-class GzipRequestInterceptor implements Interceptor {
-    @Override public Response intercept(Chain chain) throws IOException {
-        Request originalRequest = chain.request();
-        if (originalRequest.body() == null || originalRequest.header("Content-Encoding") != null) {
-            return chain.proceed(originalRequest);
-        }
+@Schema(description = "An object containing information about a specific recipe ingredient")
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-03-09T22:26:17.802Z[GMT]")
+public class RecipeObjectIngredients {
+  @SerializedName("quantity")
+  private String quantity = null;
 
-        Request compressedRequest = originalRequest.newBuilder()
-                                                   .header("Content-Encoding", "gzip")
-                                                   .method(originalRequest.method(), forceContentLength(gzip(originalRequest.body())))
-                                                   .build();
-        return chain.proceed(compressedRequest);
+  @SerializedName("description")
+  private String description = null;
+
+  public RecipeObjectIngredients quantity(String quantity) {
+    this.quantity = quantity;
+    return this;
+  }
+
+   /**
+   * The quantity of this ingredient
+   * @return quantity
+  **/
+  @Schema(description = "The quantity of this ingredient")
+  public String getQuantity() {
+    return quantity;
+  }
+
+  public void setQuantity(String quantity) {
+    this.quantity = quantity;
+  }
+
+  public RecipeObjectIngredients description(String description) {
+    this.description = description;
+    return this;
+  }
+
+   /**
+   * A description of this ingredient
+   * @return description
+  **/
+  @Schema(description = "A description of this ingredient")
+  public String getDescription() {
+    return description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
+
+
+  @Override
+  public boolean equals(java.lang.Object o) {
+    if (this == o) {
+      return true;
     }
-
-    private RequestBody forceContentLength(final RequestBody requestBody) throws IOException {
-        final Buffer buffer = new Buffer();
-        requestBody.writeTo(buffer);
-        return new RequestBody() {
-            @Override
-            public MediaType contentType() {
-                return requestBody.contentType();
-            }
-
-            @Override
-            public long contentLength() {
-                return buffer.size();
-            }
-
-            @Override
-            public void writeTo(BufferedSink sink) throws IOException {
-                sink.write(buffer.snapshot());
-            }
-        };
+    if (o == null || getClass() != o.getClass()) {
+      return false;
     }
+    RecipeObjectIngredients recipeObjectIngredients = (RecipeObjectIngredients) o;
+    return Objects.equals(this.quantity, recipeObjectIngredients.quantity) &&
+        Objects.equals(this.description, recipeObjectIngredients.description);
+  }
 
-    private RequestBody gzip(final RequestBody body) {
-        return new RequestBody() {
-            @Override public MediaType contentType() {
-                return body.contentType();
-            }
+  @Override
+  public int hashCode() {
+    return Objects.hash(quantity, description);
+  }
 
-            @Override public long contentLength() {
-                return -1; // We don't know the compressed length in advance!
-            }
 
-            @Override public void writeTo(BufferedSink sink) throws IOException {
-                BufferedSink gzipSink = Okio.buffer(new GzipSink(sink));
-                body.writeTo(gzipSink);
-                gzipSink.close();
-            }
-        };
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class RecipeObjectIngredients {\n");
+    
+    sb.append("    quantity: ").append(toIndentedString(quantity)).append("\n");
+    sb.append("    description: ").append(toIndentedString(description)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
     }
+    return o.toString().replace("\n", "\n    ");
+  }
+
 }

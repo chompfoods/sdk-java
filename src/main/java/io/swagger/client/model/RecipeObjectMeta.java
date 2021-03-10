@@ -19,75 +19,160 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import io.swagger.client.model.RecipeObjectMetaImages;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 /**
- * An object containing photos of the front of this item&#x27;s packaging
+ * An object containing this item&#x27;s compatibility grades for each supported diet
  */
-@Schema(description = "An object containing photos of the front of this item's packaging")
+@Schema(description = "An object containing this item's compatibility grades for each supported diet")
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-03-09T22:26:17.802Z[GMT]")
-public class BrandedFoodObjectPackagingPhotosFront {
-  @SerializedName("small")
-  private String small = null;
+public class RecipeObjectMeta {
+  @SerializedName("url")
+  private String url = null;
 
-  @SerializedName("thumb")
-  private String thumb = null;
+  @SerializedName("images")
+  private RecipeObjectMetaImages images = null;
 
-  @SerializedName("display")
-  private String display = null;
+  @SerializedName("source")
+  private String source = null;
 
-  public BrandedFoodObjectPackagingPhotosFront small(String small) {
-    this.small = small;
+  @SerializedName("cuisine")
+  private String cuisine = null;
+
+  @SerializedName("created")
+  private String created = null;
+
+  @SerializedName("modified")
+  private String modified = null;
+
+  @SerializedName("nutrients_notice")
+  private String nutrientsNotice = null;
+
+  public RecipeObjectMeta url(String url) {
+    this.url = url;
     return this;
   }
 
    /**
-   * Small photo of the front of this item&#x27;s packaging
-   * @return small
+   * URL to the recipe. You must link back to the recipe when displaying it.
+   * @return url
   **/
-  @Schema(description = "Small photo of the front of this item's packaging")
-  public String getSmall() {
-    return small;
+  @Schema(description = "URL to the recipe. You must link back to the recipe when displaying it.")
+  public String getUrl() {
+    return url;
   }
 
-  public void setSmall(String small) {
-    this.small = small;
+  public void setUrl(String url) {
+    this.url = url;
   }
 
-  public BrandedFoodObjectPackagingPhotosFront thumb(String thumb) {
-    this.thumb = thumb;
+  public RecipeObjectMeta images(RecipeObjectMetaImages images) {
+    this.images = images;
     return this;
   }
 
    /**
-   * Thumbnail photo of the front of this item&#x27;s packaging
-   * @return thumb
+   * Get images
+   * @return images
   **/
-  @Schema(description = "Thumbnail photo of the front of this item's packaging")
-  public String getThumb() {
-    return thumb;
+  @Schema(description = "")
+  public RecipeObjectMetaImages getImages() {
+    return images;
   }
 
-  public void setThumb(String thumb) {
-    this.thumb = thumb;
+  public void setImages(RecipeObjectMetaImages images) {
+    this.images = images;
   }
 
-  public BrandedFoodObjectPackagingPhotosFront display(String display) {
-    this.display = display;
+  public RecipeObjectMeta source(String source) {
+    this.source = source;
     return this;
   }
 
    /**
-   * Full-sized photo of the front of this item&#x27;s packaging
-   * @return display
+   * The source of the recipe. You must attribute this source when displaying this recipe.
+   * @return source
   **/
-  @Schema(description = "Full-sized photo of the front of this item's packaging")
-  public String getDisplay() {
-    return display;
+  @Schema(description = "The source of the recipe. You must attribute this source when displaying this recipe.")
+  public String getSource() {
+    return source;
   }
 
-  public void setDisplay(String display) {
-    this.display = display;
+  public void setSource(String source) {
+    this.source = source;
+  }
+
+  public RecipeObjectMeta cuisine(String cuisine) {
+    this.cuisine = cuisine;
+    return this;
+  }
+
+   /**
+   * This recipe&#x27;s cuisine
+   * @return cuisine
+  **/
+  @Schema(description = "This recipe's cuisine")
+  public String getCuisine() {
+    return cuisine;
+  }
+
+  public void setCuisine(String cuisine) {
+    this.cuisine = cuisine;
+  }
+
+  public RecipeObjectMeta created(String created) {
+    this.created = created;
+    return this;
+  }
+
+   /**
+   * The date when this recipe was created
+   * @return created
+  **/
+  @Schema(description = "The date when this recipe was created")
+  public String getCreated() {
+    return created;
+  }
+
+  public void setCreated(String created) {
+    this.created = created;
+  }
+
+  public RecipeObjectMeta modified(String modified) {
+    this.modified = modified;
+    return this;
+  }
+
+   /**
+   * The date when this recipe was most recently modified
+   * @return modified
+  **/
+  @Schema(description = "The date when this recipe was most recently modified")
+  public String getModified() {
+    return modified;
+  }
+
+  public void setModified(String modified) {
+    this.modified = modified;
+  }
+
+  public RecipeObjectMeta nutrientsNotice(String nutrientsNotice) {
+    this.nutrientsNotice = nutrientsNotice;
+    return this;
+  }
+
+   /**
+   * Additional information about this recipe&#x27;s nutrients
+   * @return nutrientsNotice
+  **/
+  @Schema(description = "Additional information about this recipe's nutrients")
+  public String getNutrientsNotice() {
+    return nutrientsNotice;
+  }
+
+  public void setNutrientsNotice(String nutrientsNotice) {
+    this.nutrientsNotice = nutrientsNotice;
   }
 
 
@@ -99,26 +184,34 @@ public class BrandedFoodObjectPackagingPhotosFront {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    BrandedFoodObjectPackagingPhotosFront brandedFoodObjectPackagingPhotosFront = (BrandedFoodObjectPackagingPhotosFront) o;
-    return Objects.equals(this.small, brandedFoodObjectPackagingPhotosFront.small) &&
-        Objects.equals(this.thumb, brandedFoodObjectPackagingPhotosFront.thumb) &&
-        Objects.equals(this.display, brandedFoodObjectPackagingPhotosFront.display);
+    RecipeObjectMeta recipeObjectMeta = (RecipeObjectMeta) o;
+    return Objects.equals(this.url, recipeObjectMeta.url) &&
+        Objects.equals(this.images, recipeObjectMeta.images) &&
+        Objects.equals(this.source, recipeObjectMeta.source) &&
+        Objects.equals(this.cuisine, recipeObjectMeta.cuisine) &&
+        Objects.equals(this.created, recipeObjectMeta.created) &&
+        Objects.equals(this.modified, recipeObjectMeta.modified) &&
+        Objects.equals(this.nutrientsNotice, recipeObjectMeta.nutrientsNotice);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(small, thumb, display);
+    return Objects.hash(url, images, source, cuisine, created, modified, nutrientsNotice);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class BrandedFoodObjectPackagingPhotosFront {\n");
+    sb.append("class RecipeObjectMeta {\n");
     
-    sb.append("    small: ").append(toIndentedString(small)).append("\n");
-    sb.append("    thumb: ").append(toIndentedString(thumb)).append("\n");
-    sb.append("    display: ").append(toIndentedString(display)).append("\n");
+    sb.append("    url: ").append(toIndentedString(url)).append("\n");
+    sb.append("    images: ").append(toIndentedString(images)).append("\n");
+    sb.append("    source: ").append(toIndentedString(source)).append("\n");
+    sb.append("    cuisine: ").append(toIndentedString(cuisine)).append("\n");
+    sb.append("    created: ").append(toIndentedString(created)).append("\n");
+    sb.append("    modified: ").append(toIndentedString(modified)).append("\n");
+    sb.append("    nutrientsNotice: ").append(toIndentedString(nutrientsNotice)).append("\n");
     sb.append("}");
     return sb.toString();
   }

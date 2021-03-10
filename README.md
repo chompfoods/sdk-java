@@ -1,10 +1,10 @@
 # swagger-java-client
 
-Chomp Food Database API Documentation
+Chomp Food &amp; Recipe Database API Documentation
 - API version: 1.0.0-oas3
-  - Build date: 2020-01-30T02:08:15.933Z[GMT]
+  - Build date: 2021-03-09T22:26:17.802Z[GMT]
 
-## Important An **[API key](https://chompthis.com/api/)** is required for access to this API. Get yours at **[https://chompthis.com/api](https://chompthis.com/api/)**.  ### Getting Started   * **[Subscribe](https://chompthis.com/api/#pricing)** to the API.   * Scroll down and click the \"**Authorize**\" button.   * Enter your API key into the \"**value**\" input, click the \"**Authorize**\" button, then click the \"**Close**\" button.   * Scroll down to the section titled \"**default**\" and click on the API endpoint you wish to use.   * Click the \"**Try it out**\" button.   * Enter the information the endpoint requires.   * Click the \"**Execute**\" button.  ### Example    * Branded food response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/branded-food-response-object.json)**   * Ingredient response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/ingredient-response-object.json)**   * Error response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/error-response-object.json)**  ### How Do I Find My API Key?   * Your API key was sent to the email address you used to create your subscription.   * You will also find your API key in the **[Client Center](https://chompthis.com/api/manage.php)**.   * Read **[this article](https://desk.zoho.com/portal/chompthis/kb/articles/how-do-i-find-my-api-key)** for more information.  ### Helpful Links   * **Help & Support**     * [Knowledge Base &raquo;](https://desk.zoho.com/portal/chompthis/kb/chomp)     * [Support &raquo;](https://chompthis.com/api/ticket-new.php)     * [Client Center &raquo;](https://chompthis.com/api/manage.php)   * **Pricing**     * [Subscription Options &raquo;](https://chompthis.com/api/)     * [Cost Calculator &raquo;](https://chompthis.com/api/cost-calculator.php)   * **Guidelines**     * [Terms & License &raquo;](https://chompthis.com/api/terms.php)     * [Attribution &raquo;](https://chompthis.com/api/docs/attribution.php) 
+## Important An **[API key](https://chompthis.com/api/)** is required for access to this API. * Get a **Food Data API** key at **[https://chompthis.com/api](https://chompthis.com/api/)**. * Get a **Recipe Data API** key at **[https://chompthis.com/api/recipes](https://chompthis.com/api/recipes/)**.  ### Getting Started   * Subscribe to the **[Food Data API](https://chompthis.com/api/#pricing)** or the **[Recipe Data API](https://chompthis.com/api/recipes/#pricing)**.   * Scroll down and click the \"**Authorize**\" button.   * Enter your API key into the \"**value**\" input, click the \"**Authorize**\" button, then click the \"**Close**\" button.   * Scroll down to the section titled \"**default**\" and click on the API endpoint you wish to use.   * Click the \"**Try it out**\" button.   * Enter the information the endpoint requires.   * Click the \"**Execute**\" button.  ### Example    * Branded food response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/branded-food-response-object.json)**   * Ingredient response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/ingredient-response-object.json)**   * Recipe response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/example-recipe-response.json)**   * Error response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/error-response-object.json)**  ### How Do I Find My API Key?   * Your API key was sent to the email address you used to create your subscription.   * You will also find your API key in the **[Client Center](https://chompthis.com/api/manage.php)**.   * Read **[this article](https://desk.zoho.com/portal/chompthis/kb/articles/how-do-i-find-my-api-key)** for more information.  ### I'm a Premium subscriber. How do I access the API?   * All Premium subscribers must pass in a unique user ID for each user on their platform that is accessing data from the Chomp API. A user ID can be any string of letters and numbers that you assign to your user. Simply add \"user_id\" as a URL parameter when calling the API. *You must add a \"user_id\" URL parameter to every call you make to ANY endpoint.*     * **Example**        > ```ENDPOINT.php?api_key=API_KEY&code=CODE&user_id=USER_ID```  ### Helpful Links   * **Help & Support**     * [Knowledge Base &raquo;](https://desk.zoho.com/portal/chompthis/kb/chomp)     * [Support &raquo;](https://chompthis.com/api/ticket-new.php)     * [Client Center &raquo;](https://chompthis.com/api/manage.php)   * **Pricing**     * [Food Data API Subscription Options &raquo;](https://chompthis.com/api/)     * [Recipe Data API Subscription Options &raquo;](https://chompthis.com/api/recipes/)     * [Food Data API Cost Calculator &raquo;](https://chompthis.com/api/cost-calculator.php)     * [Recipe Data API Cost Calculator &raquo;](https://chompthis.com/api/recipes/cost-calculator.php)   * **Guidelines**     * [Terms & License &raquo;](https://chompthis.com/api/terms.php)     * [Attribution &raquo;](https://chompthis.com/api/docs/attribution.php) 
 
 
 *Automatically generated by the [Swagger Codegen](https://github.com/swagger-api/swagger-codegen)*
@@ -92,8 +92,9 @@ public class DefaultApiExample {
 
         DefaultApi apiInstance = new DefaultApi();
         String code = "code_example"; // String | #### UPC/EAN barcode  **Example** > ```&code=0842234000988``` 
+        String userId = "userId_example"; // String | #### **Only required for Premium subscribers.** The unique identifier assigned to each user on your platform. This can be any string of letters or numbers and doesn't have to relate to your own database. [Learn more](https://desk.zoho.com/portal/chompthis/en/kb/articles/monthly-active-users)  **Example** > ```&user_id=fehef8w4ha``` 
         try {
-            BrandedFoodObject result = apiInstance.foodBrandedBarcodePhpGet(code);
+            BrandedFoodObject result = apiInstance.foodBrandedBarcodePhpGet(code, userId);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling DefaultApi#foodBrandedBarcodePhpGet");
@@ -124,8 +125,9 @@ public class DefaultApiExample {
         String name = "name_example"; // String | #### Search for branded food items using a general food name keyword. This does not have to exactly match the \"official\" name for the food.  **Example** > ```&name=Starburst``` 
         Integer limit = 56; // Integer | #### Set maximum number of records you want the API to return. The default value is \"**10**.\"  **Example** > ```&limit=10``` 
         Integer page = 56; // Integer | #### This is how you paginate the search result. By default, you will see the first 10 records. You must increment the page number to access the next 10 records, and so on. The default value is \"**1**.\"  **Example** > ```&page=1``` 
+        String userId = "userId_example"; // String | #### **Only required for Premium subscribers.** The unique identifier assigned to each user on your platform. This can be any string of letters or numbers and doesn't have to relate to your own database. [Learn more](https://desk.zoho.com/portal/chompthis/en/kb/articles/monthly-active-users)  **Example** > ```&user_id=fehef8w4ha``` 
         try {
-            BrandedFoodObject result = apiInstance.foodBrandedNamePhpGet(name, limit, page);
+            BrandedFoodObject result = apiInstance.foodBrandedNamePhpGet(name, limit, page, userId);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling DefaultApi#foodBrandedNamePhpGet");
@@ -167,8 +169,9 @@ public class DefaultApiExample {
         String vitamin = "vitamin_example"; // String | #### Filter the search to only include branded foods that contain a specific vitamin.  **Example** > ```&vitamin=Biotin``` 
         Integer limit = 56; // Integer | #### Set maximum number of records you want the API to return. The default value is \"**10**.\"  **Example** > ```&limit=10``` 
         Integer page = 56; // Integer | #### This is how you paginate the search result. By default, you will see the first 10 records. You must increment the page number to access the next 10 records, and so on. The default value is \"**1**.\"  **Example** > ```&page=1``` 
+        String userId = "userId_example"; // String | #### **Only required for Premium subscribers.** The unique identifier assigned to each user on your platform. This can be any string of letters or numbers and doesn't have to relate to your own database. [Learn more](https://desk.zoho.com/portal/chompthis/en/kb/articles/monthly-active-users)  **Example** > ```&user_id=fehef8w4ha``` 
         try {
-            BrandedFoodObject result = apiInstance.foodBrandedSearchPhpGet(allergen, brand, category, country, diet, ingredient, keyword, mineral, nutrient, palmOil, trace, vitamin, limit, page);
+            BrandedFoodObject result = apiInstance.foodBrandedSearchPhpGet(allergen, brand, category, country, diet, ingredient, keyword, mineral, nutrient, palmOil, trace, vitamin, limit, page, userId);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling DefaultApi#foodBrandedSearchPhpGet");
@@ -198,11 +201,145 @@ public class DefaultApiExample {
         DefaultApi apiInstance = new DefaultApi();
         String find = "find_example"; // String | Search our database for a single ingredient or a specific set of ingredients.  **Example #1: Single Ingredient** > ```&find=raw broccoli```  **Example #2: Set of Ingredients** > ```&find=raw broccoli,buttermilk waffle,mashed potatoes```  **Important Notes**    * Comma-separated lists cannot contain more than **10 ingredients**. You must perform additional API calls if you are looking up more than 10 ingredients. 
         Integer limit = 56; // Integer | #### Set maximum number of records you want the API to return, per search term. The default value is \"**1**.\"  **Example** > ```&limit=3``` 
+        String userId = "userId_example"; // String | #### **Only required for Premium subscribers.** The unique identifier assigned to each user on your platform. This can be any string of letters or numbers and doesn't have to relate to your own database. [Learn more](https://desk.zoho.com/portal/chompthis/en/kb/articles/monthly-active-users)  **Example** > ```&user_id=fehef8w4ha``` 
         try {
-            IngredientObject result = apiInstance.foodIngredientSearchPhpGet(find, limit);
+            IngredientObject result = apiInstance.foodIngredientSearchPhpGet(find, limit, userId);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling DefaultApi#foodIngredientSearchPhpGet");
+            e.printStackTrace();
+        }
+    }
+}
+import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.DefaultApi;
+
+import java.io.File;
+import java.util.*;
+
+public class DefaultApiExample {
+
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+        // Configure API key authorization: ApiKeyAuth
+        ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+        ApiKeyAuth.setApiKey("YOUR API KEY");
+        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+        //ApiKeyAuth.setApiKeyPrefix("Token");
+
+        DefaultApi apiInstance = new DefaultApi();
+        String id = "id_example"; // String | #### A recipe ID. Recipe IDs are exposed in the /recipe/search and /recipe/ingredient endpoints.  **Example** > ```&list=tdm_1143_0459d0028fcf8990724785b9e6775037``` 
+        String userId = "userId_example"; // String | #### **Only required for Premium subscribers.** The unique identifier assigned to each user on your platform. This can be any string of letters or numbers and doesn't have to relate to your own database. [Learn more](https://desk.zoho.com/portal/chompthis/en/kb/articles/monthly-active-users)  **Example** > ```&user_id=fehef8w4ha``` 
+        try {
+            RecipeObject result = apiInstance.recipeIdPhpGet(id, userId);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling DefaultApi#recipeIdPhpGet");
+            e.printStackTrace();
+        }
+    }
+}
+import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.DefaultApi;
+
+import java.io.File;
+import java.util.*;
+
+public class DefaultApiExample {
+
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+        // Configure API key authorization: ApiKeyAuth
+        ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+        ApiKeyAuth.setApiKey("YOUR API KEY");
+        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+        //ApiKeyAuth.setApiKeyPrefix("Token");
+
+        DefaultApi apiInstance = new DefaultApi();
+        String list = "list_example"; // String | #### A single ingredient, or a comma-separated list of up to 3 ingredients. Recipes with each of these ingredients will be returned. **You can pass in up to 3 ingredients at a time.**  **Example** > ```&list=cheese,tomato,milk``` 
+        Integer limit = 56; // Integer | #### Set maximum number of records you want the API to return. The default value is \"**3**.\"  **Example** > ```&limit=3``` 
+        Integer page = 56; // Integer | #### This is how you paginate the search result. By default, you will see the first 3 records. You must increment the page number to access the next 3 records, and so on. The default value is \"**1**.\"  **Example** > ```&page=1``` 
+        String userId = "userId_example"; // String | #### **Only required for Premium subscribers.** The unique identifier assigned to each user on your platform. This can be any string of letters or numbers and doesn't have to relate to your own database. [Learn more](https://desk.zoho.com/portal/chompthis/en/kb/articles/monthly-active-users)  **Example** > ```&user_id=fehef8w4ha``` 
+        try {
+            RecipeObject result = apiInstance.recipeIngredientPhpGet(list, limit, page, userId);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling DefaultApi#recipeIngredientPhpGet");
+            e.printStackTrace();
+        }
+    }
+}
+import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.DefaultApi;
+
+import java.io.File;
+import java.util.*;
+
+public class DefaultApiExample {
+
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+        // Configure API key authorization: ApiKeyAuth
+        ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+        ApiKeyAuth.setApiKey("YOUR API KEY");
+        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+        //ApiKeyAuth.setApiKeyPrefix("Token");
+
+        DefaultApi apiInstance = new DefaultApi();
+        Integer limit = 56; // Integer | #### Set maximum number of records you want the API to return. The default value is \"**5**.\"  **Example** > ```&limit=5``` 
+        String userId = "userId_example"; // String | #### **Only required for Premium subscribers.** The unique identifier assigned to each user on your platform. This can be any string of letters or numbers and doesn't have to relate to your own database. [Learn more](https://desk.zoho.com/portal/chompthis/en/kb/articles/monthly-active-users)  **Example** > ```&user_id=fehef8w4ha``` 
+        try {
+            RecipeObject result = apiInstance.recipeRandomPhpGet(limit, userId);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling DefaultApi#recipeRandomPhpGet");
+            e.printStackTrace();
+        }
+    }
+}
+import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.DefaultApi;
+
+import java.io.File;
+import java.util.*;
+
+public class DefaultApiExample {
+
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+        // Configure API key authorization: ApiKeyAuth
+        ApiKeyAuth ApiKeyAuth = (ApiKeyAuth) defaultClient.getAuthentication("ApiKeyAuth");
+        ApiKeyAuth.setApiKey("YOUR API KEY");
+        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+        //ApiKeyAuth.setApiKeyPrefix("Token");
+
+        DefaultApi apiInstance = new DefaultApi();
+        String title = "title_example"; // String | #### A recipe title  **Example** > ```&title=Banana Bread``` 
+        String excludedCuisine = "excludedCuisine_example"; // String | #### A specific cuisine you want excluded from results  **Example** > ```&excluded_cuisine=Italian``` 
+        String includedCuisine = "includedCuisine_example"; // String | #### A specific cuisine you want included in results  **Example** > ```&included_cuisine=Chinese``` 
+        String excludedIngredient = "excludedIngredient_example"; // String | #### Recipes with this ingredient will be excluded from results  **Example** > ```&excluded_ingredient=egg``` 
+        String includedIngredient = "includedIngredient_example"; // String | #### Only recipes with this ingredient will be returned  **Example** > ```&included_ingredient=apple``` 
+        Integer nutrientsRequired = 56; // Integer | #### Optionally require all recipes to include nutrition info. Recipes with, or without, nutrition info are returned by default.  **Example** > ```&nutrients_required=1``` 
+        Integer limit = 56; // Integer | #### Set maximum number of records you want the API to return. The default value is \"**5**.\"  **Example** > ```&limit=3``` 
+        Integer page = 56; // Integer | #### This is how you paginate the search result. By default, you will see the first 5 records. You must increment the page number to access the next 5 records, and so on. The default value is \"**1**.\"  **Example** > ```&page=1``` 
+        String userId = "userId_example"; // String | #### **Only required for Premium subscribers.** The unique identifier assigned to each user on your platform. This can be any string of letters or numbers and doesn't have to relate to your own database. [Learn more](https://desk.zoho.com/portal/chompthis/en/kb/articles/monthly-active-users)  **Example** > ```&user_id=fehef8w4ha``` 
+        try {
+            RecipeObject result = apiInstance.recipeSearchPhpGet(title, excludedCuisine, includedCuisine, excludedIngredient, includedIngredient, nutrientsRequired, limit, page, userId);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling DefaultApi#recipeSearchPhpGet");
             e.printStackTrace();
         }
     }
@@ -219,6 +356,10 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**foodBrandedNamePhpGet**](docs/DefaultApi.md#foodBrandedNamePhpGet) | **GET** /food/branded/name.php | Get a branded food item by name
 *DefaultApi* | [**foodBrandedSearchPhpGet**](docs/DefaultApi.md#foodBrandedSearchPhpGet) | **GET** /food/branded/search.php | Get data for branded food items using various search parameters
 *DefaultApi* | [**foodIngredientSearchPhpGet**](docs/DefaultApi.md#foodIngredientSearchPhpGet) | **GET** /food/ingredient/search.php | Get raw/generic food ingredient item(s)
+*DefaultApi* | [**recipeIdPhpGet**](docs/DefaultApi.md#recipeIdPhpGet) | **GET** /recipe/id.php | Get a recipe by ID
+*DefaultApi* | [**recipeIngredientPhpGet**](docs/DefaultApi.md#recipeIngredientPhpGet) | **GET** /recipe/ingredient.php | Get recipes using a list of ingredients
+*DefaultApi* | [**recipeRandomPhpGet**](docs/DefaultApi.md#recipeRandomPhpGet) | **GET** /recipe/random.php | Get random popular recipes
+*DefaultApi* | [**recipeSearchPhpGet**](docs/DefaultApi.md#recipeSearchPhpGet) | **GET** /recipe/search.php | Get recipes using a title and optional filters
 
 ## Documentation for Models
 
@@ -243,6 +384,14 @@ Class | Method | HTTP request | Description
  - [IngredientObjectItems](docs/IngredientObjectItems.md)
  - [IngredientObjectNutrients](docs/IngredientObjectNutrients.md)
  - [IngredientObjectPortions](docs/IngredientObjectPortions.md)
+ - [RecipeObject](docs/RecipeObject.md)
+ - [RecipeObjectAttributes](docs/RecipeObjectAttributes.md)
+ - [RecipeObjectIngredients](docs/RecipeObjectIngredients.md)
+ - [RecipeObjectItems](docs/RecipeObjectItems.md)
+ - [RecipeObjectMeta](docs/RecipeObjectMeta.md)
+ - [RecipeObjectMetaImages](docs/RecipeObjectMetaImages.md)
+ - [RecipeObjectNutrients](docs/RecipeObjectNutrients.md)
+ - [RecipeObjectNutrientsCalories](docs/RecipeObjectNutrientsCalories.md)
 
 ## Documentation for Authorization
 

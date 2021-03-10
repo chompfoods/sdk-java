@@ -22,72 +22,93 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 /**
- * An object containing photos of the front of this item&#x27;s packaging
+ * An object containing recipe attributes
  */
-@Schema(description = "An object containing photos of the front of this item's packaging")
+@Schema(description = "An object containing recipe attributes")
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-03-09T22:26:17.802Z[GMT]")
-public class BrandedFoodObjectPackagingPhotosFront {
-  @SerializedName("small")
-  private String small = null;
+public class RecipeObjectAttributes {
+  @SerializedName("prep_time")
+  private String prepTime = null;
 
-  @SerializedName("thumb")
-  private String thumb = null;
+  @SerializedName("total_time")
+  private String totalTime = null;
 
-  @SerializedName("display")
-  private String display = null;
+  @SerializedName("servings")
+  private String servings = null;
 
-  public BrandedFoodObjectPackagingPhotosFront small(String small) {
-    this.small = small;
+  @SerializedName("serving_size")
+  private String servingSize = null;
+
+  public RecipeObjectAttributes prepTime(String prepTime) {
+    this.prepTime = prepTime;
     return this;
   }
 
    /**
-   * Small photo of the front of this item&#x27;s packaging
-   * @return small
+   * The time it takes to prep this recipe
+   * @return prepTime
   **/
-  @Schema(description = "Small photo of the front of this item's packaging")
-  public String getSmall() {
-    return small;
+  @Schema(description = "The time it takes to prep this recipe")
+  public String getPrepTime() {
+    return prepTime;
   }
 
-  public void setSmall(String small) {
-    this.small = small;
+  public void setPrepTime(String prepTime) {
+    this.prepTime = prepTime;
   }
 
-  public BrandedFoodObjectPackagingPhotosFront thumb(String thumb) {
-    this.thumb = thumb;
+  public RecipeObjectAttributes totalTime(String totalTime) {
+    this.totalTime = totalTime;
     return this;
   }
 
    /**
-   * Thumbnail photo of the front of this item&#x27;s packaging
-   * @return thumb
+   * The total time it takes to make this recipe
+   * @return totalTime
   **/
-  @Schema(description = "Thumbnail photo of the front of this item's packaging")
-  public String getThumb() {
-    return thumb;
+  @Schema(description = "The total time it takes to make this recipe")
+  public String getTotalTime() {
+    return totalTime;
   }
 
-  public void setThumb(String thumb) {
-    this.thumb = thumb;
+  public void setTotalTime(String totalTime) {
+    this.totalTime = totalTime;
   }
 
-  public BrandedFoodObjectPackagingPhotosFront display(String display) {
-    this.display = display;
+  public RecipeObjectAttributes servings(String servings) {
+    this.servings = servings;
     return this;
   }
 
    /**
-   * Full-sized photo of the front of this item&#x27;s packaging
-   * @return display
+   * The number of servings this recipe makes
+   * @return servings
   **/
-  @Schema(description = "Full-sized photo of the front of this item's packaging")
-  public String getDisplay() {
-    return display;
+  @Schema(description = "The number of servings this recipe makes")
+  public String getServings() {
+    return servings;
   }
 
-  public void setDisplay(String display) {
-    this.display = display;
+  public void setServings(String servings) {
+    this.servings = servings;
+  }
+
+  public RecipeObjectAttributes servingSize(String servingSize) {
+    this.servingSize = servingSize;
+    return this;
+  }
+
+   /**
+   * The size of each serving
+   * @return servingSize
+  **/
+  @Schema(description = "The size of each serving")
+  public String getServingSize() {
+    return servingSize;
+  }
+
+  public void setServingSize(String servingSize) {
+    this.servingSize = servingSize;
   }
 
 
@@ -99,26 +120,28 @@ public class BrandedFoodObjectPackagingPhotosFront {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    BrandedFoodObjectPackagingPhotosFront brandedFoodObjectPackagingPhotosFront = (BrandedFoodObjectPackagingPhotosFront) o;
-    return Objects.equals(this.small, brandedFoodObjectPackagingPhotosFront.small) &&
-        Objects.equals(this.thumb, brandedFoodObjectPackagingPhotosFront.thumb) &&
-        Objects.equals(this.display, brandedFoodObjectPackagingPhotosFront.display);
+    RecipeObjectAttributes recipeObjectAttributes = (RecipeObjectAttributes) o;
+    return Objects.equals(this.prepTime, recipeObjectAttributes.prepTime) &&
+        Objects.equals(this.totalTime, recipeObjectAttributes.totalTime) &&
+        Objects.equals(this.servings, recipeObjectAttributes.servings) &&
+        Objects.equals(this.servingSize, recipeObjectAttributes.servingSize);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(small, thumb, display);
+    return Objects.hash(prepTime, totalTime, servings, servingSize);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class BrandedFoodObjectPackagingPhotosFront {\n");
+    sb.append("class RecipeObjectAttributes {\n");
     
-    sb.append("    small: ").append(toIndentedString(small)).append("\n");
-    sb.append("    thumb: ").append(toIndentedString(thumb)).append("\n");
-    sb.append("    display: ").append(toIndentedString(display)).append("\n");
+    sb.append("    prepTime: ").append(toIndentedString(prepTime)).append("\n");
+    sb.append("    totalTime: ").append(toIndentedString(totalTime)).append("\n");
+    sb.append("    servings: ").append(toIndentedString(servings)).append("\n");
+    sb.append("    servingSize: ").append(toIndentedString(servingSize)).append("\n");
     sb.append("}");
     return sb.toString();
   }

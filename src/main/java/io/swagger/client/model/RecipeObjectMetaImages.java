@@ -22,30 +22,114 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.IOException;
 /**
- * An object containing photos of the front of this item&#x27;s packaging
+ * An object containing this recipe&#x27;s image URLs
  */
-@Schema(description = "An object containing photos of the front of this item's packaging")
+@Schema(description = "An object containing this recipe's image URLs")
 @javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.JavaClientCodegen", date = "2021-03-09T22:26:17.802Z[GMT]")
-public class BrandedFoodObjectPackagingPhotosFront {
+public class RecipeObjectMetaImages {
+  @SerializedName("extra_large")
+  private String extraLarge = null;
+
+  @SerializedName("large")
+  private String large = null;
+
+  @SerializedName("standard")
+  private String standard = null;
+
+  @SerializedName("grid_view")
+  private String gridView = null;
+
   @SerializedName("small")
   private String small = null;
 
-  @SerializedName("thumb")
-  private String thumb = null;
+  @SerializedName("thumbnail")
+  private String thumbnail = null;
 
-  @SerializedName("display")
-  private String display = null;
+  @SerializedName("extra_small")
+  private String extraSmall = null;
 
-  public BrandedFoodObjectPackagingPhotosFront small(String small) {
+  public RecipeObjectMetaImages extraLarge(String extraLarge) {
+    this.extraLarge = extraLarge;
+    return this;
+  }
+
+   /**
+   * Extra large recipe image
+   * @return extraLarge
+  **/
+  @Schema(description = "Extra large recipe image")
+  public String getExtraLarge() {
+    return extraLarge;
+  }
+
+  public void setExtraLarge(String extraLarge) {
+    this.extraLarge = extraLarge;
+  }
+
+  public RecipeObjectMetaImages large(String large) {
+    this.large = large;
+    return this;
+  }
+
+   /**
+   * Large recipe image
+   * @return large
+  **/
+  @Schema(description = "Large recipe image")
+  public String getLarge() {
+    return large;
+  }
+
+  public void setLarge(String large) {
+    this.large = large;
+  }
+
+  public RecipeObjectMetaImages standard(String standard) {
+    this.standard = standard;
+    return this;
+  }
+
+   /**
+   * Standard recipe image
+   * @return standard
+  **/
+  @Schema(description = "Standard recipe image")
+  public String getStandard() {
+    return standard;
+  }
+
+  public void setStandard(String standard) {
+    this.standard = standard;
+  }
+
+  public RecipeObjectMetaImages gridView(String gridView) {
+    this.gridView = gridView;
+    return this;
+  }
+
+   /**
+   * Grid view recipe image
+   * @return gridView
+  **/
+  @Schema(description = "Grid view recipe image")
+  public String getGridView() {
+    return gridView;
+  }
+
+  public void setGridView(String gridView) {
+    this.gridView = gridView;
+  }
+
+  public RecipeObjectMetaImages small(String small) {
     this.small = small;
     return this;
   }
 
    /**
-   * Small photo of the front of this item&#x27;s packaging
+   * Small recipe image
    * @return small
   **/
-  @Schema(description = "Small photo of the front of this item's packaging")
+  @Schema(description = "Small recipe image")
   public String getSmall() {
     return small;
   }
@@ -54,40 +138,40 @@ public class BrandedFoodObjectPackagingPhotosFront {
     this.small = small;
   }
 
-  public BrandedFoodObjectPackagingPhotosFront thumb(String thumb) {
-    this.thumb = thumb;
+  public RecipeObjectMetaImages thumbnail(String thumbnail) {
+    this.thumbnail = thumbnail;
     return this;
   }
 
    /**
-   * Thumbnail photo of the front of this item&#x27;s packaging
-   * @return thumb
+   * Thumbnail recipe image
+   * @return thumbnail
   **/
-  @Schema(description = "Thumbnail photo of the front of this item's packaging")
-  public String getThumb() {
-    return thumb;
+  @Schema(description = "Thumbnail recipe image")
+  public String getThumbnail() {
+    return thumbnail;
   }
 
-  public void setThumb(String thumb) {
-    this.thumb = thumb;
+  public void setThumbnail(String thumbnail) {
+    this.thumbnail = thumbnail;
   }
 
-  public BrandedFoodObjectPackagingPhotosFront display(String display) {
-    this.display = display;
+  public RecipeObjectMetaImages extraSmall(String extraSmall) {
+    this.extraSmall = extraSmall;
     return this;
   }
 
    /**
-   * Full-sized photo of the front of this item&#x27;s packaging
-   * @return display
+   * Extra small recipe image
+   * @return extraSmall
   **/
-  @Schema(description = "Full-sized photo of the front of this item's packaging")
-  public String getDisplay() {
-    return display;
+  @Schema(description = "Extra small recipe image")
+  public String getExtraSmall() {
+    return extraSmall;
   }
 
-  public void setDisplay(String display) {
-    this.display = display;
+  public void setExtraSmall(String extraSmall) {
+    this.extraSmall = extraSmall;
   }
 
 
@@ -99,26 +183,34 @@ public class BrandedFoodObjectPackagingPhotosFront {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    BrandedFoodObjectPackagingPhotosFront brandedFoodObjectPackagingPhotosFront = (BrandedFoodObjectPackagingPhotosFront) o;
-    return Objects.equals(this.small, brandedFoodObjectPackagingPhotosFront.small) &&
-        Objects.equals(this.thumb, brandedFoodObjectPackagingPhotosFront.thumb) &&
-        Objects.equals(this.display, brandedFoodObjectPackagingPhotosFront.display);
+    RecipeObjectMetaImages recipeObjectMetaImages = (RecipeObjectMetaImages) o;
+    return Objects.equals(this.extraLarge, recipeObjectMetaImages.extraLarge) &&
+        Objects.equals(this.large, recipeObjectMetaImages.large) &&
+        Objects.equals(this.standard, recipeObjectMetaImages.standard) &&
+        Objects.equals(this.gridView, recipeObjectMetaImages.gridView) &&
+        Objects.equals(this.small, recipeObjectMetaImages.small) &&
+        Objects.equals(this.thumbnail, recipeObjectMetaImages.thumbnail) &&
+        Objects.equals(this.extraSmall, recipeObjectMetaImages.extraSmall);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(small, thumb, display);
+    return Objects.hash(extraLarge, large, standard, gridView, small, thumbnail, extraSmall);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class BrandedFoodObjectPackagingPhotosFront {\n");
+    sb.append("class RecipeObjectMetaImages {\n");
     
+    sb.append("    extraLarge: ").append(toIndentedString(extraLarge)).append("\n");
+    sb.append("    large: ").append(toIndentedString(large)).append("\n");
+    sb.append("    standard: ").append(toIndentedString(standard)).append("\n");
+    sb.append("    gridView: ").append(toIndentedString(gridView)).append("\n");
     sb.append("    small: ").append(toIndentedString(small)).append("\n");
-    sb.append("    thumb: ").append(toIndentedString(thumb)).append("\n");
-    sb.append("    display: ").append(toIndentedString(display)).append("\n");
+    sb.append("    thumbnail: ").append(toIndentedString(thumbnail)).append("\n");
+    sb.append("    extraSmall: ").append(toIndentedString(extraSmall)).append("\n");
     sb.append("}");
     return sb.toString();
   }
